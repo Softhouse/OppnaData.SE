@@ -1,0 +1,35 @@
+// Module: ckan-service
+
+version = "0.0.1"
+
+apply plugin: 'scala'
+
+dependencies {
+	
+	// Libraries needed to run the scala tools
+	scalaTools scalaCompiler
+	scalaTools scalaLibrary
+
+	// Joda Time
+	compile jodaTime
+	compile jodaConvert
+	
+	// Dispatch HTTP
+	compile dispatchHttp
+	
+	// SJSON
+	compile sjson
+}
+
+
+processResources << {
+	copy {
+		into "$buildDir/resources/main"
+		from configurations.compile
+		include 'dispatch**'
+		include 'http**'
+		include 'sjson**'
+		include 'joda**'
+	}
+}
+

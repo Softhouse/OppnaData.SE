@@ -1,0 +1,8 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    <service interface="se.oppnadata.portal.ckan.api.CKANService">
+        <service-properties>
+        	<entry key="serviceName" value="ckanService"/>
+        </service-properties>
+        <bean class="se.oppnadata.portal.ckan.service.CKANServiceBean"/>
+    </service>
+</blueprint>
