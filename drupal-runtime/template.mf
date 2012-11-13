@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: drupal-runtime
+Bundle-Version: 0.0.1
+Bundle-Name: Drupal Runtime
+TDR-Resource-Directory: php
+TDR-Exported-Paths: drupal-6.26=,rewritefilter=
+
+

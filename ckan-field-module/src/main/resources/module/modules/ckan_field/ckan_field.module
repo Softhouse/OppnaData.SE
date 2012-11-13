@@ -1,0 +1,551 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * The CCK hooks for creating an CKAN field, plus all the code
+ * to retrieve the necessary data from CKAN itself.
+ */
+
+
+/**
+ * Implements hook_menu().
+ */
+function ckan_field_menu() {
+  $items = array();
+
+  // AHAH callback page
+  $items['ckan_field_filter'] = array(
+    'title' => 'Table builder',
+    'page callback' => 'ckan_field_build_data_ahah',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+} 
+
+
+//==========================================//
+// DEFINING A FIELD
+//==========================================//
+
+/**
+ * Implements hook_field_info().
+ */
+function ckan_field_field_info() {
+  return array(
+    // The machine name of the field, 
+    // no more than 32 characters.
+    'ckan_field' => array(
+      // The human-readable label of the field that will be 
+      // seen in the Manage fields screen.
+      'label' => t('CKAN'),
+      // A description of what type of data the field stores.
+      'description' => t('Store text data in the database.'),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_field_settings().
+ */
+function ckan_field_field_settings($op, $field) {
+  $return = array();
+
+  module_load_include('inc', 'ckan_field', 'ckan_field_field');
+  $op = str_replace(' ', '_', $op);
+  $function = 'ckan_field_field_settings_' . $op;
+  if (function_exists($function)) {
+    $result = $function($field);
+    if (isset($result) && is_array($result)) {
+      $return = $result;
+    }
+  }
+
+  return $return;
+}
+
+
+/**
+ * Implements hook_field().
+ */
+function ckan_field_field($op, &$node, $field, &$items, $teaser, $page) {
+  switch ($op) {
+    // Do validation on the field values here. The widget 
+    // will do its own validation and you cannot make any 
+    // assumptions about what kind of widget has been used, 
+    // so don't validate widget values, only field values.
+    case 'validate':
+      if (is_array($items)) {
+        foreach ($items as $delta => $item) {
+          // The error_element is needed so that CCK can 
+          // set an error on the right sub-element when 
+          // fields are deeply nested in the form.
+          $error_element = isset($item['_error_element']) ? $item['_error_element'] : '';
+          if (is_array($item) && isset($item['_error_element'])) unset($item['_error_element']);
+          if (!empty($item['value'])) {
+          	
+          	// TODO: Add validation of the dataset here
+          	/*
+            // Show are error if there is a trailing slash
+            if (substr($item['value'], -1) == "/") { 
+              form_set_error($error_element, t('%name: must not have a trailing slash, please remove the last slash.', array('%name' => $field['widget']['label'])));
+            }
+            // Check if it's a valid URL
+            if (!preg_match("/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/", $item['value'])) {
+              form_set_error($error_element, t('%name: must be a valid URL including http://.', array('%name' => $field['widget']['label'])));
+            }
+            */
+          }
+        }
+      }
+      return $items;
+    // This is where you make sure that user-provided 
+    // data is sanitized before being displayed.
+    case 'sanitize':
+      foreach ($items as $delta => $item) {
+        $ckan_field = check_plain($item['value']);
+        $items[$delta]['safe'] = $ckan_field;
+      }
+  }
+}
+
+/**
+ * Implements hook_content_is_empty().
+ * 
+ * CCK has no way to know if something like a zero is
+ * an empty value or a valid value, so return
+ * TRUE or FALSE to a populated field $item array.
+ * CCK uses this to remove empty multi-value elements
+ * from forms.
+ */
+function ckan_field_content_is_empty($item, $field) {
+  if (empty($item['value'])) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+
+/**
+ * Implements hook_token_list() 
+ * and hook_token_values().
+ * 
+ * Optional, provide token values for this field.
+ */
+function ckan_field_token_list($type = 'all') {
+  if ($type == 'field' || $type == 'all') {
+    $tokens = array();
+    $tokens['ckan_field']['raw']       = t('Raw, unfiltered text');
+    $tokens['ckan_field']['formatted'] = t('Formatted and filtered text');
+
+    return $tokens;
+  }
+}
+
+function ckan_field_token_values($type, $object = NULL) {
+  if ($type == 'field') {
+    $item = $object[0];
+    $tokens['raw']  = $item['value'];
+    $tokens['formatted'] = isset($item['view']) ? $item['view'] : '';
+    return $tokens;
+  }
+}
+
+
+//==========================================//
+// DEFINING A FORMATTER
+//==========================================//
+
+/**
+ * Implements hook_theme().
+ */
+function ckan_field_theme() {
+  return array(
+    // Themes for the formatters.
+    'ckan_field_formatter_default' => array(
+      'arguments' => array('element' => NULL, 'field' => $field),
+      'file' => 'ckan_field_formatter.inc',
+    ),
+    'ckan_field_formatter_plain' => array(
+      'arguments' => array('element' => NULL),
+      'file' => 'ckan_field_formatter.inc',
+    ),
+    'ckan_field_formatter_link' => array(
+      'arguments' => array('element' => NULL),
+      'file' => 'ckan_field_formatter.inc',
+    ),
+    'ckan_field_filter' => array(
+      'arguments' => array(),
+      'file' => 'ckan_field_formatter.inc',
+    ),
+    'ckan_field_container' => array(
+      'arguments' => array('headers', 'rows'),
+      'file' => 'ckan_field_formatter.inc',
+    ),
+    'ckan_field_datatable' => array(
+      'arguments' => array('headers', 'rows'),
+      'file' => 'ckan_field_formatter.inc',
+    ),
+    'ckan_field_helptext' => array(
+      'file' => 'ckan_field_formatter.inc',
+    ),
+    'ckan_field_atom_link' => array(
+      'arguments' => array('datasource', 'dataset_id', 'querystring'),
+      'file' => 'ckan_field_formatter.inc',
+    ),
+    'ckan_field_download_link' => array(
+      'arguments' => array('datasource', 'dataset_id', 'querystring'),
+      'file' => 'ckan_field_formatter.inc',
+    )
+  );
+}
+
+
+/**
+ * Implements hook_field_formatter_info().
+ * 
+ * All fields should have a 'default' formatter.
+ * Any number of other formatters can be defined as well.
+ * It's nice for there always to be a 'plain' option
+ * for the raw value, but that is not required.
+ * 
+ */
+function ckan_field_field_formatter_info() {
+  return array(
+    // The machine name of the formatter.
+    'default' => array(
+      // The human-readable label shown on the Display 
+      // fields screen.
+      'label' => t('Default'),
+      // An array of the field types this formatter 
+      // can be used on.
+      'field types' => array('ckan_field'),
+      // CONTENT_HANDLE_CORE:   CCK will pass the formatter
+      // a single value.
+      // CONTENT_HANDLE_MODULE: CCK will pass the formatter
+      // an array of all the values. None of CCK's core 
+      // formatters use multiple values, that is an option
+      // available to other modules that want it.
+      'multiple values' => CONTENT_HANDLE_CORE,
+    ),
+    'plain' => array(
+      'label' => t('Plain text'),
+      'field types' => array('ckan_field'),
+      'multiple values' => CONTENT_HANDLE_CORE,
+    ),
+    'link' => array(
+      'label' => t('Link with URL as text'),
+      'field types' => array('ckan_field'),
+      'multiple values' => CONTENT_HANDLE_CORE,
+    ),
+  );
+}
+
+
+//==========================================//
+// DEFINING A WIDGET
+//==========================================//
+
+/**
+ * Implements hook_widget_info().
+ *
+ * Here we indicate that the content module will handle
+ * the default value and multiple values for these widgets.
+ *
+ * Callbacks can be omitted if default handing is used.
+ * They're included here just so this module can be used
+ * as an ckan_field for custom modules that might do things
+ * differently.
+ */
+function ckan_field_widget_info() {
+  return array(
+    // The machine name of the widget, no more than 32 
+    // characters.
+    'ckan_field_widget' => array(
+      // The human-readable label of the field that will be 
+      // seen in the Manage fields screen.
+      'label' => t('CKAN field'),
+      // An array of the field types this widget can be 
+      // used with.
+      'field types' => array('ckan_field'),
+      // Who will handle multiple values, default is core.
+      // 'CONTENT_HANDLE_MODULE' means the module does it.
+      // See optionwidgets for an ckan_field of a module that 
+      // handles its own multiple values.
+      'multiple values' => CONTENT_HANDLE_CORE,
+      'callbacks' => array(
+        // Who will create the default value, default is core.
+        // 'CONTENT_CALLBACK_CUSTOM' means the module does it.
+        // 'CONTENT_CALLBACK_NONE' means this widget has 
+        // no default value.
+        'default value' => CONTENT_CALLBACK_DEFAULT,
+      ),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_widget_settings().
+ */
+function ckan_field_widget_settings($op, $widget) {
+  switch ($op) {
+    // Create the form element to be used on the widget 
+    // settings form. Widget settings can be different 
+    // for each shared instance of the same field and 
+    // should define the way the value is displayed to 
+    // the user in the edit form for that content type.
+    case 'form':
+      $form = array();
+      $size = (isset($widget['size']) && is_numeric($widget['size'])) ? $widget['size'] : 60;
+      $form['size'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Size of textfield'),
+        '#default_value' => $size,
+        '#element_validate' => array('_element_validate_integer_positive'),
+        '#required' => TRUE,
+      );
+      return $form;
+
+    // Return an array of the names of the widget settings 
+    // defined by this module. These are the items that 
+    // CCK will store in the widget definition and they 
+    // will be available in the $field['widget'] array.
+    // This should match the items defined in 'form' above.
+    case 'save':
+      return array('size');
+  }
+}
+
+/**
+ * Implements hook_widget().
+ *
+ * Attach a single form element to the form. 
+ * 
+ * CCK core fields only add a stub element and builds 
+ * the complete item in #process so reusable elements 
+ * created by hook_elements can be plugged into any 
+ * module that provides valid $field information.
+ * 
+ * Custom widgets that don't care about using hook_elements
+ * can be built out completely at this time.
+ *
+ * If there are multiple values for this field and CCK is 
+ * handling multiple values, the content module will call 
+ * this function as many times as needed.
+ *
+ * @param $form
+ *   the entire form array, 
+ *   $form['#node'] holds node information
+ * @param $form_state
+ *   the form_state, 
+ *   $form_state['values'][$field['field_name']]
+ *   holds the field's form values.
+ * @param $field
+ *   the field array
+ * @param $items
+ *   array of default values for this field
+ * @param $delta
+ *   the order of this item in the array of 
+ *   subelements (0, 1, 2, etc)
+ *
+ * @return
+ *   the form item for a single element for this field
+ */
+function ckan_field_widget(&$form, &$form_state, $field, $items, $delta = 0) {
+   $element['value'] = array(
+    '#type' => 'textfield',
+    '#title' => check_plain($field['widget']['label']),
+    '#description' => check_plain($field['widget']['description']) . '<br/>' . t('You must enter a valid CKAN dataset id'),
+    '#default_value' => isset($items[$delta]['value']) ? $items[$delta]['value'] : NULL,
+    '#autocomplete_path' => $element['#autocomplete_path'],
+    '#size' => !empty($field['widget']['size']) ? $field['widget']['size'] : 60,
+    '#attributes' => array('class' => 'ckan_field'),
+    '#maxlength' => NULL,
+  );
+  
+  // Used so that hook_field('validate') knows where to 
+  // flag an e`rror in deeply nested forms.
+  if (empty($form['#parents'])) {
+    $form['#parents'] = array();
+  }
+  $element['_error_element'] = array(
+    '#type' => 'value',
+    '#value' => implode('][', array_merge($form['#parents'], array('value'))),
+  );
+  
+  return $element;
+}
+
+
+//==========================================//
+// RETRIEVING THE DATA
+//==========================================//
+
+/**
+ * Creates the CKAN Object.
+ *
+ * Initializes it in one central place reusing it if needed.
+ *
+ * @param $datasource
+ *   A string containing the path to the datasource container.
+ *
+ * @param $dataset_id
+ *   A string containing the name of the dataset to retrieve.
+ *
+ * @return
+ *   A full CKAN object.
+ */
+function ckan_field_CKAN($datasource = NULL, $dataset_id = NULL) {
+  static $CKAN = NULL;
+  if (!$CKAN) {
+  
+    // TODO: REPLACE WITH CALL TO CKAN SERVICE!!!
+    require_once(dirname(__FILE__) . '/CKAN-api.php');
+    $CKAN= new CKAN($datasource, $dataset_id);
+  }
+  return $CKAN;
+}
+
+
+/**
+ * Function to retrieve metadata of a certain dataset from CKAN.
+ *
+ * Empty e-mail addresses are allowed. See RFC 2822 for details.
+ *
+ * @param $CKAN
+ *   An CKAN object.
+ *
+ * @return
+ *   An array of Metadata for a specific dataset, built from decoded JSON data.
+ */
+function ckan_field_get_metadata($CKAN) {
+  try {
+    $data = $CKAN->getEntityMetadata(array('$filter' => "entityset eq '". $CKAN->dataset_id ."'", 'format' => 'json' ));  
+  } catch (CKANException $e) {
+    watchdog('CKAN', $e->getMessage());
+    drupal_set_message(t('Failed to get Metadata for %dataset', array('%dataset' => $CKAN->dataset_id)), 'warning');
+  }
+  $results = json_decode($data);
+  return $results;
+}
+
+
+/**
+ * Function to retrieve the full data of a certain dataset from CKAN.
+ *
+ * @param $CKAN
+ *   An CKAN object.
+ *
+ * @param $parameters
+ *   An array of querystring parameters to pass to the API callt.
+ *
+ * @return
+ *   An array of Metadata for a specific dataset, built from decoded JSON data.
+ */
+function ckan_field_get_data($CKAN, $parameters) {
+  try {
+    $data = $CKAN->getDataset($CKAN->dataset_id, $parameters);
+  } catch (CKANException $e) {
+    watchdog('CKAN', $e->getMessage());
+    drupal_set_message(t('Failed to get data for %dataset ', array('%dataset' => $CKAN->dataset_id)) , 'warning');
+  }
+  $results = json_decode($data);
+  return $results;
+}
+
+
+//==========================================//
+// BUILDING THE DATA
+//==========================================//
+
+/**
+ * Function to retrieve and build data when filter is run.
+ *
+ * @see ckan_field_filter_form().
+ */
+function ckan_field_build_data_ahah() {
+  $datasource = filter_xss($_POST['datasource']);
+  $dataset_id = filter_xss($_POST['dataset_id']);
+  
+  $filter = $_POST['filter'];
+  
+  $parameters = array('format' => 'json', '$filter' => $filter);
+  
+  // TODO: What to do here?? Just call CKAN integration layer??
+  
+  // Create a new instance of CKAN object
+  //$CKAN = ckan_field_CKAN($datasource, $dataset_id);
+  // Get the schema (column names) of the dataset
+  //$schema = ckan_field_get_metadata($CKAN);
+  
+  // Build the table headers from that
+  $headers = array('Test1', 'Test2');
+  
+  //ckan_field_build_table_headers($schema->d[0]);
+  
+  // Get the data
+  //$data = ckan_field_get_data($CKAN, $parameters);
+
+  // Build the table rows from that data
+  //$rows = ckan_field_build_table($data->d, $headers);
+  
+  $rows = array( array('Test1' => 'VALUE1', 'Test2' => 'VALUE2'), array('Test1' => 'VALUE1.2', 'Test2' => 'VALUE 2.2'));
+    
+  
+  $output = theme('ckan_field_container', $headers, $rows, $parameters);
+  //watchdog('CKAN', 'Filter has a value of %value ', array('value' => $filter));
+  drupal_json($output);
+}
+
+
+/**
+ * Function to build table headers from CKAN meta data response.
+ *
+ * @param $data
+ *   An array containing dataset metadata.
+ *
+ * @return
+ *   An array of table headers that can be used by theme_table().
+ */
+function ckan_field_build_table_headers($data) {
+  // Cast the Object into an array...
+  $data = (array) $data;
+  // Remove the first 6 elements, they are not needed...
+  $data = array_slice($data, 6);
+  foreach ($data as $name => $type) {
+    $headers[] = filter_xss($name); 
+  }
+  return $headers;
+}
+
+
+/**
+ * Function to build table from CKAN meta data response.
+ *
+ * @param $data
+ *   An array containing the data returned from an API call.
+ *
+ * @param $headers
+ *  An array of table headers gotten from ckan_field_build_table_headers().
+ *
+ * @return
+ *   An array of rows that can be used by theme_table().
+ */
+function ckan_field_build_table($data, $headers) {
+  foreach ($data as $row) {
+    $row = (array) $row;  // Cast row from an Object to an array...
+    $row = array_slice($row, 4);  // Remove the first 4 items, they are not needed...
+    for ($i=0; $i<=count($headers)-1; $i++) { 
+      // We now need to match each column in a row with a header...
+      // Create a new array and set it's key to be the name of the header column...
+      // Set it's value to be the value for that column in the current row, it may be empty...
+      $new_row[$headers[$i]] = $row[$headers[$i]];
+    }
+    $rows[] = $new_row;
+  }
+  return $rows;
+}

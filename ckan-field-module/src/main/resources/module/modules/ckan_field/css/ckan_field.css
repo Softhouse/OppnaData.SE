@@ -1,0 +1,23 @@
+/* Add some margins to the wrapper */
+#ckan-wrapper {
+  margin:10px 0;
+}
+
+/* Need to stop maps from being positioned all over the page */
+#ckan-map, 
+#ckan-map #bing-map {
+  position: relative;
+}
+
+/* Override the default Bing Map width */
+#ckan-map #bing-map {
+  width:100% !important;
+}
+
+/* Style the filter help link */
+.ckan-helptip {
+  display: block;
+  float:right;
+  font-size:0.81em;
+  text-align:right;
+}

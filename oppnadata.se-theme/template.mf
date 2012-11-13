@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: oppnadata.se-theme 
+Bundle-Version: 0.0.1
+Bundle-Name: ÖppnaData.se Theme 
+TDR-Host: Drupal Runtime
+TDR-Host-Prio: 2
+TDR-Resource-Directory: php
+TDR-Exported-Paths: theme=
+
+

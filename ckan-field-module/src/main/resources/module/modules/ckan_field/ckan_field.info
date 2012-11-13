@@ -1,0 +1,15 @@
+; $Id$
+name = CKAN Field
+description = Defines a field for embedding an CKAN dataset in a node
+dependencies[] = content
+; dependencies[] = jquery_update
+dependencies[] = jquery_ui
+package = CCK
+core = 6.x
+php = 5.1
+; Information added by drupal.org packaging script on 2011-03-30
+version = "6.x-1.0"
+core = "6.x"
+project = "ckan_field"
+datestamp = "1301526969"
+

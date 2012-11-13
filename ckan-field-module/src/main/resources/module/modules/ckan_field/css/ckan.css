@@ -1,0 +1,10 @@
+/* Need to stop maps from being positioned all over the page */
+#ckan-map, 
+#ckan-map #bing-map {
+	position: relative;
+}
+
+/* Override the default Bing Map width */
+#ckan-map #bing-map {
+	width:100% !important;
+}

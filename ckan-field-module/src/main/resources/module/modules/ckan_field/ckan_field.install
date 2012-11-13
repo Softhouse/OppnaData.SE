@@ -1,0 +1,45 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ */
+
+// Notify CCK when this module is enabled, disabled, installed,
+// and uninstalled so CCK can do any necessary preparation or cleanup.
+
+/**
+ * Implementation of hook_install().
+ */
+function ckan_field_install() {
+  drupal_load('module', 'content');
+  content_notify('install', 'ckan_field');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function ckan_field_uninstall() {
+  drupal_load('module', 'content');
+  content_notify('uninstall', 'ckan_field');
+}
+
+/**
+ * Implementation of hook_enable().
+ *
+ * Notify content module when this module is enabled.
+ */
+function ckan_field_enable() {
+  drupal_load('module', 'content');
+  content_notify('enable', 'ckan_field');
+}
+
+/**
+ * Implementation of hook_disable().
+ *
+ * Notify content module when this module is disabled.
+ */
+function ckan_field_disable() {
+  drupal_load('module', 'content');
+  content_notify('disable', 'ckan_field');
+}

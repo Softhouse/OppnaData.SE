@@ -1,0 +1,21 @@
+// Drupal Runtime
+        
+apply plugin: 'java'
+
+version = "0.0.1"
+drupalDist = 'drupal-6.26.zip' // TODO: Set property in another way
+
+dependencies {
+    	
+}
+
+processResources << {
+	
+	File drupalZip = file('build/' + drupalDist)
+	drupalZip.bytes = new URL('http://ftp.drupal.org/files/projects/' + drupalDist).bytes
+	copy {
+		from zipTree('build/' + drupalDist)
+		into 'build/resources/main'
+	}
+	
+}
