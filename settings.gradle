@@ -1,5 +1,6 @@
 include 	'ckan-service',
 			'quercus-runtime',
 			'drupal-runtime',
-		'ckan-field-module',
-		'oppnadata.se-theme'
+			'drupal-base-modules',
+			'ckan-field-module',
+			'oppnadata.se-theme'
