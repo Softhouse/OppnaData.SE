@@ -2,7 +2,7 @@
 
 function getDatasetsByCkanTag($ckan_tag) {
 	$nodeids = array();
-	$ckan = spring_bean('ckanService');
+	$ckan = service_ref('ckanService');
 	$datasets = $ckan->searchDatasetIdsByTag($ckan_tag);
 	if ( $datasets->size() > 0 ) {
 		$datasetsStr = "'" . $datasets->mkString("','") . "'";

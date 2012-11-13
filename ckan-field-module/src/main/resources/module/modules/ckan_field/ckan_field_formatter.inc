@@ -42,7 +42,7 @@ function theme_ckan_field_formatter_default($element) {
     // Filter out any harmful stuff
     $dataset_id = filter_xss($element['#item']['safe']);
     
-    $ckan = spring_bean('ckanService');
+    $ckan = service_ref('ckanService');
    
     try {
     	$dataset = $ckan->getDataset($dataset_id);  
