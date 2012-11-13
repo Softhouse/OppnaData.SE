@@ -1,0 +1,3 @@
+Drupal base modules for ÖppnaData.SE are:
+- LESS
+- Libraries

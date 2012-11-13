@@ -1,0 +1,52 @@
+// Drupal Base Modules
+        
+version = "0.0.1"
+
+dependencies {
+    	
+}
+
+processResources << {
+ 
+	def drupal = new ArtifactDownloader(file("$buildDir"), "http://ftp.drupal.org/files/projects/")
+	copy {
+		from zipTree(drupal.getResource("less-6.x-2.8.zip"))
+		from zipTree(drupal.getResource("libraries-6.x-1.0.zip"))
+		from zipTree(drupal.getResource("cck-6.x-2.9.zip"))
+		from zipTree(drupal.getResource("jquery_ui-6.x-1.5.zip"))
+		into "$buildDir/resources/main/module/modules"
+	}
+	def lessphp = new ArtifactDownloader(file("$buildDir"), "http://leafo.net/lessphp/src/")
+	copy {
+		from tarTree(lessphp.getResource("lessphp-0.3.8.tar.gz"))
+		into "$buildDir/resources/main/module/sites/all/libraries"
+	}
+	def jquery = new ArtifactDownloader(file("$buildDir"), "http://jquery-ui.googlecode.com/files/")
+	copy {
+		from zipTree(jquery.getResource("jquery.ui-1.6.zip"))
+		into "$buildDir/resources/main/module/sites/all/libraries"
+	}
+	ant.move(file: "$buildDir/resources/main/module/sites/all/libraries/jquery.ui-1.6", toFile: "$buildDir/resources/main/module/sites/all/libraries/jquery.ui")
+}
+
+/*
+ * Class for downloading artifacts
+ * TODO: Move this to a shared build file
+ */
+class ArtifactDownloader {
+
+	String baseDir
+	String baseUrl
+	
+	ArtifactDownloader(File baseDir, String baseUrl) {
+		this.baseDir = baseDir
+		this.baseUrl = baseUrl
+	}	
+	
+	public File getResource(String resource) {
+		File resourceFile = new File(baseDir.toString() + "/" + resource)
+		resourceFile.bytes = new URL(baseUrl + resource).bytes
+		return resourceFile
+	}
+	
+}
