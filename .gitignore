@@ -46,3 +46,7 @@ bin/
 ##################
 build/
 .gradle/
+
+# Server
+##################
+apache-tomcat-7.0.29-tdr/
