@@ -1,0 +1,27 @@
+
+/* Debug */
+
+@c1: #0D242A;
+@c2: #696538;
+@c3: #1D1C12;
+@c4: #50192E;
+@c5: #693C4E;
+
+
+.fillBackground (@color: @c1) {
+  background-color: @color;
+  border-color: ligthen(@color, 10%);
+}
+
+#logo 				{ .fillBackground; }
+#content			{ .fillBackground(@c1); }
+#name-and-slogan 	{ .fillBackground(@c2); }
+#search-box 		{ .fillBackground(@c3); }
+#header-region 		{ .fillBackground(@c4); }
+#primary 			{ .fillBackground(#993400);}
+#secondary 			{ .fillBackground(@c1); }
+#content-content 	{ .fillBackground(@c2); }
+#breadcrumb 		{ .fillBackground(@c3); }
+#mission            { .fillBackground(@c4); }
+#sidebar-left       { .fillBackground(@c5); }
+
