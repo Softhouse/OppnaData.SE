@@ -1,0 +1,9 @@
+name = Rapid Response
+description = A responsive theme made by Softhouse(TM)
+core = 6.x
+engine = phptemplate
+
+stylesheets[all][] = css/normalize.css
+stylesheets[all][] = css/main.css
+
+
