@@ -18,7 +18,6 @@
                         <img src="<?= $logo; ?>" alt="<?= t('Home'); ?>" />
                     </a>
                 <?php endif; ?>
-
             </div>
 
             <div id="logo-mobile">
