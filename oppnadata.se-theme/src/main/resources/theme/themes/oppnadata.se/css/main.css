@@ -30,7 +30,7 @@ a {
 }
 div.item-list ul li {
   list-style: none;
-  list-style-type: none;
+  list-style-type: disc;
 }
 #name-and-slogan h1 a {
   color: #619dca;
@@ -142,7 +142,7 @@ aside ul.menu ul a {
   header #search-box {
     display: inline;
     float: left;
-    width: 39.583333333333%;
+    width: 47.916666666667%;
     margin: 0 1.0416666666667%;
     text-align: right;
   }
