@@ -14,6 +14,8 @@ processResources << {
 		from zipTree(drupal.getResource("libraries-6.x-1.0.zip"))
 		from zipTree(drupal.getResource("cck-6.x-2.9.zip"))
 		from zipTree(drupal.getResource("jquery_ui-6.x-1.5.zip"))
+		from zipTree(drupal.getResource("superfish-6.x-1.8.zip"))
+		from zipTree(drupal.getResource("admin_menu-6.x-1.8.zip"))
 		into "$buildDir/resources/main/module/modules"
 	}
 	def lessphp = new ArtifactDownloader(file("$buildDir"), "http://leafo.net/lessphp/src/")
@@ -26,7 +28,18 @@ processResources << {
 		from zipTree(jquery.getResource("jquery.ui-1.6.zip"))
 		into "$buildDir/resources/main/module/sites/all/libraries"
 	}
+
+	def superfish = new ArtifactDownloader(file("$buildDir"), "https://github.com/mehrpadin/Superfish-for-Drupal/archive/")
+	copy {
+		from zipTree(superfish.getResource("master.zip"))
+		into "$buildDir/resources/main/module/sites/all/libraries"
+	}
+
+
+
+
 	ant.move(file: "$buildDir/resources/main/module/sites/all/libraries/jquery.ui-1.6", toFile: "$buildDir/resources/main/module/sites/all/libraries/jquery.ui")
+	ant.move(file: "$buildDir/resources/main/module/sites/all/libraries/Superfish-for-Drupal-master", toFile: "$buildDir/resources/main/module/sites/all/libraries/superfish")
 }
 
 /*
