@@ -46,12 +46,4 @@ bin/
 ##################
 build/
 .gradle/
-<<<<<<< HEAD
-
-# Server
-##################
-apache-tomcat-7.0.29-tdr/
-=======
 gradle.properties
-
->>>>>>> Updated Git ignores with gradle.properties

@@ -5,7 +5,7 @@ Bundle-Version: 0.0.1
 Bundle-Name: CKAN Field Module 
 TDR-Host: Drupal Runtime
 TDR-Host-Prio: 2
-TDR-Resource-Directory: php
+TDR-Resource-Directory: webapps/ROOT
 TDR-Exported-Paths: module=
 
 

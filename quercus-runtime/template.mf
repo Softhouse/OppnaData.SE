@@ -3,6 +3,5 @@ Bundle-ManifestVersion: 2
 Bundle-SymbolicName: quercus-runtime
 Bundle-Version: 0.0.1
 Bundle-Name: Quercus Runtime
-TDR-Resource-Directory: php
 TDR-Exported-Paths: quercus=
 

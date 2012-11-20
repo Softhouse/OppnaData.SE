@@ -8,14 +8,53 @@ dependencies {
 
 processResources << {
  
+	// TODO: Insert all modules under modules or sites/all/modules ???
+	// TODO: Include tinymce library
+	
+	// Module som saknas: OATH,CTOOLS, Context 
+	// Plus localization stöd: l10n_update
+	
+	println("Downloading Drupal modules...")
 	def drupal = new ArtifactDownloader(file("$buildDir"), "http://ftp.drupal.org/files/projects/")
 	copy {
 		from zipTree(drupal.getResource("less-6.x-2.8.zip"))
 		from zipTree(drupal.getResource("libraries-6.x-1.0.zip"))
-		from zipTree(drupal.getResource("cck-6.x-2.9.zip"))
 		from zipTree(drupal.getResource("jquery_ui-6.x-1.5.zip"))
+		from zipTree(drupal.getResource("cck-6.x-2.9.zip"))
+		from tarTree(drupal.getResource("cck_blocks-6.x-1.3.tar.gz"))
+		from tarTree(drupal.getResource("hierarchical_select-6.x-3.8.tar.gz"))
+		from tarTree(drupal.getResource("hs_field_selector-6.x-1.1.tar.gz"))
+		from tarTree(drupal.getResource("hs_nodereference-6.x-1.0.tar.gz"))
+		from tarTree(drupal.getResource("imageapi-6.x-1.10.tar.gz"))
+		from tarTree(drupal.getResource("imagefield-6.x-3.10.tar.gz"))
+		from tarTree(drupal.getResource("imce-6.x-2.4.tar.gz"))
+		from tarTree(drupal.getResource("imce_wysiwyg-6.x-1.1.tar.gz"))
+		from tarTree(drupal.getResource("link-6.x-2.9.tar.gz"))
+		from tarTree(drupal.getResource("nodeasblock-6.x-1.0-beta1.tar.gz"))
+		from tarTree(drupal.getResource("sections-6.x-1.4.tar.gz"))
+		from tarTree(drupal.getResource("taxonomy_groups-6.x-1.2.tar.gz"))
+		from tarTree(drupal.getResource("content_taxonomy-6.x-1.0-rc2.tar.gz"))
+		from tarTree(drupal.getResource("views-6.x-2.16.tar.gz"))
+		from tarTree(drupal.getResource("views_bulk_operations-6.x-1.13.tar.gz"))
+		from tarTree(drupal.getResource("filefield-6.x-3.10.tar.gz"))
+		from tarTree(drupal.getResource("wysiwyg-6.x-2.4.tar.gz"))
+		from tarTree(drupal.getResource("taxonomy_breadcrumb-6.x-1.1.tar.gz"))
+		from tarTree(drupal.getResource("taxonomy_filter-6.x-1.6.tar.gz"))
+		from tarTree(drupal.getResource("taxonomy_manager-6.x-2.2.tar.gz"))
+		from tarTree(drupal.getResource("taxonomy_menu-6.x-2.9.tar.gz"))
+		from tarTree(drupal.getResource("taxonomy_treemenu-6.x-7.1.tar.gz"))
+		from tarTree(drupal.getResource("simpleviews-6.x-1.0.tar.gz"))
+		from tarTree(drupal.getResource("pathauto-6.x-1.6.tar.gz"))
+		from tarTree(drupal.getResource("token-6.x-1.19.tar.gz"))
+		from tarTree(drupal.getResource("twitter-6.x-3.0.tar.gz"))
+		from tarTree(drupal.getResource("dhtml_menu-6.x-3.5.tar.gz"))
+		from tarTree(drupal.getResource("term_filter-6.x-1.4.tar.gz"))
+		from tarTree(drupal.getResource("viewfield-6.x-2.0.tar.gz"))
+		from tarTree(drupal.getResource("viewsphpfilter-6.x-1.0.tar.gz"))
 		into "$buildDir/resources/main/module/modules"
 	}
+	
+	println("Download libraries...")
 	def lessphp = new ArtifactDownloader(file("$buildDir"), "http://leafo.net/lessphp/src/")
 	copy {
 		from tarTree(lessphp.getResource("lessphp-0.3.8.tar.gz"))

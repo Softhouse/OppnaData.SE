@@ -5,7 +5,8 @@ version = "0.0.1"
 def drupalDist = 'drupal-6.26.zip'
 
 dependencies {
-    	
+    compile 'org.tuckey:urlrewritefilter:4.0.3'
+	compile javaxServlet	
 }
 
 processResources << {

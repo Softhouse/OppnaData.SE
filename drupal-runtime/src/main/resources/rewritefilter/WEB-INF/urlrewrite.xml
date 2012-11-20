@@ -10,7 +10,7 @@
 -->
 <urlrewrite>
 
-   <class-rule class="com.brianshowalter.drupalrewrite.DrupalRule" />
+   <class-rule class="org.tdr.drupal.runtime.rewrite.DrupalRule" />
 <!--
     <rule>
         <note>
