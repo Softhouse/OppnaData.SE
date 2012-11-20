@@ -1,0 +1,16 @@
+// Tomcat TDR Server Distribution 
+        
+version = "0.0.1"
+
+dependencies {
+}
+
+// TODO: Base this on a ready TDR distribution and download tdr dist from repo
+
+// TODO: Include all modules & runtimes in this dist
+
+task dist(type: Zip, dependsOn: processResources) {
+	from "$buildDir/resources/main/"
+}
+
+

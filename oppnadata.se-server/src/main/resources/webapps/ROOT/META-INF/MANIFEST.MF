@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+TDR-Runtimes: Quercus Runtime,Drupal Runtime
