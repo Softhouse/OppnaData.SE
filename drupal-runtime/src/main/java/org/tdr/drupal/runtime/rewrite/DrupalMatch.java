@@ -28,9 +28,18 @@ public class DrupalMatch extends RewriteMatch {
         
         newURI.append("/index.php?q=").append(drupalpath);
         
-        if( queryString != null ) {
-            newURI.append("&").append(request.getQueryString());
+//        if( queryString != null ) {
+//            newURI.append("&").append(request.getQueryString());
+//        }
+        
+        if ( queryString != null ) {
+        	QueryParams queryParams = new QueryParams(queryString);
+        	queryParams.removeParam("q"); // Remove eventual drupal path attribute
+        	if ( queryParams.size() > 0 ) {
+        		newURI.append("&").append(queryParams.toQueryString());
+        	}
         }
+        
         log.debug("New URI = "+newURI.toString());
         RequestDispatcher rd = request.getRequestDispatcher(newURI.toString());
         rd.forward(request, response);

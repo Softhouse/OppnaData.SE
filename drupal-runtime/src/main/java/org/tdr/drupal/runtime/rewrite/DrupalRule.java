@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.tuckey.web.filters.urlrewrite.extend.RewriteMatch;
 import org.tuckey.web.filters.urlrewrite.extend.RewriteRule;
 import org.tuckey.web.filters.urlrewrite.utils.Log;
- 
 
 public class DrupalRule extends RewriteRule {
 	
