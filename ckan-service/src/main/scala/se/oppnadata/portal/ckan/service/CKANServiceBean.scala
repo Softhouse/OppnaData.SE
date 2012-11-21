@@ -14,17 +14,19 @@ import scala.collection.mutable.HashMap
  */
 class CKANServiceBean extends CKANService  {
 
-  // TODO: How to configure data into beans? Just basic strings that are autowired?
   // TODO: Add error handling here...
   // TODO: Add cache support here!!
   
-  // Temporary cache solution
+  // Temporary cache solution TODO: Implement a better approach for this
   //
   var datasetCache = new /*Weak*/ HashMap[String,Dataset]; // TODO: Have the cache not clearable for demo purposes
   var datasetsByTagCache = new HashMap[String, List[String]];
   
-  //@Resource (name="ckanCatalogHost") // TODO: HAVE THIS CONFIGURABLE OUTSIDE!!!
-  var ckanCatalogHost : String = "data.gov.uk";
+  var ckanCatalogHost : String = ""; 
+  
+  def setCkanCatalogHost(host : String) {
+    ckanCatalogHost = host;
+  }
   
   val http = new Http  
   
