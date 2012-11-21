@@ -10,6 +10,7 @@ processResources << {
  
 	// TODO: Insert all modules under modules or sites/all/modules ???
 	// TODO: Include tinymce library
+	// TODO: Download to an artifact directory instead so they are not needed to be re-downloaded to able to repackage the bundle
 	
 	// Module som saknas: OATH,CTOOLS, Context 
 	// Plus localization stöd: l10n_update
@@ -51,6 +52,7 @@ processResources << {
 		from tarTree(drupal.getResource("term_filter-6.x-1.4.tar.gz"))
 		from tarTree(drupal.getResource("viewfield-6.x-2.0.tar.gz"))
 		from tarTree(drupal.getResource("viewsphpfilter-6.x-1.0.tar.gz"))
+		from tarTree(drupal.getResource("menu_block-6.x-2.4.tar.gz"))
 		into "$buildDir/resources/main/module/modules"
 	}
 	
