@@ -29,21 +29,8 @@
 
 package com.caucho.quercus.module;
 
-import com.caucho.config.ConfigException;
-import com.caucho.quercus.QuercusRuntimeException;
-import com.caucho.quercus.env.*;
-import com.caucho.quercus.expr.ExprFactory;
-import com.caucho.quercus.function.AbstractFunction;
-import com.caucho.quercus.marshal.Marshal;
-import com.caucho.quercus.marshal.MarshalFactory;
-import com.caucho.quercus.program.ClassDef;
-import com.caucho.quercus.program.InterpretedClassDef;
-import com.caucho.quercus.program.JavaClassDef;
-import com.caucho.quercus.program.JavaArrayClassDef;
-import com.caucho.util.L10N;
-import com.caucho.vfs.*;
-
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -55,7 +42,24 @@ import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.tdr.bootstrap.OSGiJarClassLoader;
+import com.caucho.config.ConfigException;
+import com.caucho.quercus.QuercusRuntimeException;
+import com.caucho.quercus.env.DoubleValue;
+import com.caucho.quercus.env.LongValue;
+import com.caucho.quercus.env.NullValue;
+import com.caucho.quercus.env.QuercusClass;
+import com.caucho.quercus.env.StringBuilderValue;
+import com.caucho.quercus.env.Value;
+import com.caucho.quercus.expr.ExprFactory;
+import com.caucho.quercus.marshal.Marshal;
+import com.caucho.quercus.marshal.MarshalFactory;
+import com.caucho.quercus.program.ClassDef;
+import com.caucho.quercus.program.InterpretedClassDef;
+import com.caucho.quercus.program.JavaArrayClassDef;
+import com.caucho.quercus.program.JavaClassDef;
+import com.caucho.util.L10N;
+import com.caucho.vfs.ReadStream;
+import com.caucho.vfs.VfsStream;
 
 /**
  * Class-loader specific context for loaded PHP.

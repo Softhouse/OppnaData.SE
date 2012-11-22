@@ -1,17 +1,85 @@
 import java.io.File;
 
-// Tomcat TDR Server Distribution 
+// ÖppnaData.SE Server Distribution 
         
 version = "0.0.1"
 
-dependencies {
+
+def tomcatVersion = "7.0.32"
+def karafVersion = "2.3.0"
+def tomcat = new ArtifactDownloader(file("$buildDir"), "http://apache.mirror3.ip-only.net/tomcat/tomcat-7/v" + tomcatVersion + "/bin/")
+def karaf = new ArtifactDownloader(file("$buildDir"), "http://apache.mirror3.ip-only.net/karaf/" + karafVersion + "/")
+
+jar {
+	enabled = false
 }
 
-// TODO: Base this on a ready TDR distribution and download tdr dist from repo
+dependencies {
+	compile tdrBootstrap
+	compile jclClassLoader
+	compile commonsLogging
+}
 
-// TODO: Include all modules & runtimes in this dist
+processResources << {
+	
+	println("Downloading Apache Tomcat v" + tomcatVersion)
+	copy {
+		from tarTree(tomcat.getResource("apache-tomcat-" + tomcatVersion + ".tar.gz"))
+		into "$buildDir/dist"
+	}
+	ant.move(file: "$buildDir/dist/apache-tomcat-" + tomcatVersion, toFile: "$buildDir/dist/oppnadata-se-server-" + version)
+	delete "$buildDir/dist/oppnadata-se-server-" + version + "/webapps"
+	println("Downloading Apache Karaf v" + karafVersion)
+	copy {
+		from tarTree(karaf.getResource("apache-karaf-" + karafVersion + ".tar.gz"))
+		into "$buildDir/dist/oppnadata-se-server-" + version
+	}
+	copy {
+		from zipTree(karaf.getResource("apache-karaf-" + karafVersion + ".zip")) // Just to fetch Windows BAT files
+		into "$buildDir/dist/oppnadata-se-server-" + version
+		include '**/*.bat'
+	}
+	ant.move(file: "$buildDir/dist/oppnadata-se-server-" + version + "/apache-karaf-" + karafVersion, toFile: "$buildDir/dist/oppnadata-se-server-" + version + "/osgi")
+	
+	copy {
+		 from "$buildDir/resources/main/"
+		 into "$buildDir/dist/oppnadata-se-server-" + version
+	}
+	
+	copy {
+		into "$buildDir/dist/oppnadata-se-server-" + version + "/lib"
+		from configurations.compile
+		include 'bootstrap**'
+		include 'jcl**'
+		include 'commons-logging**'
+	}
 
-task dist(type: Zip, dependsOn: processResources) {
-	from "$buildDir/resources/main/"
+}
+
+task dist(type: Zip, dependsOn: [clean, processResources]) {
+	from "$buildDir/dist/"
+}
+
+
+/*
+ * Class for downloading artifacts
+ * TODO: Move this to a shared build file => apply from: "file://$projectDir/../common.gradle"
+ */
+class ArtifactDownloader {
+
+	String baseDir
+	String baseUrl
+	
+	ArtifactDownloader(File baseDir, String baseUrl) {
+		this.baseDir = baseDir
+		this.baseUrl = baseUrl
+	}	
+	
+	public File getResource(String resource) {
+		File resourceFile = new File(baseDir.toString() + "/" + resource)
+		resourceFile.bytes = new URL(baseUrl + resource).bytes
+		return resourceFile
+	}
+	
 }
 

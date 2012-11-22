@@ -3,8 +3,8 @@
 version = "0.0.1"
 
 dependencies {
-	//compile quercus & TDR bootstrap
-	compile files('src/main/resources/lib/resin.jar', 'lib/bootstrap-0.1.0-SNAPSHOT.jar')
+	compile files('src/main/resources/lib/resin.jar') // quercus
+	compile tdrBootstrap
 	compile karafMain
 	compile javaxServlet
 	compile javaxCache
