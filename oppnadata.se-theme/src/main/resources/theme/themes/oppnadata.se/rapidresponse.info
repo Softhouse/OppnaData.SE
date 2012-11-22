@@ -6,4 +6,10 @@ engine = phptemplate
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/main.css
 
-
+regions[left] = Vänster meny
+regions[right] = Höger meny
+regions[main] = Main
+regions[content] = Content
+regions[header] = Huvud
+regions[footer] = Fot
+regions[nav] = Nav

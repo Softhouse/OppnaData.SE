@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
     <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <?php print $head; ?>
         <title><?php print $head_title; ?></title>
         <?php print $styles; ?>
@@ -13,7 +15,6 @@
         <header>
             <div id="logo">
                 <?php if (!empty($logo)): ?>
-
                     <a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home">
                         <img src="<?= $logo; ?>" alt="<?= t('Home'); ?>" />
                     </a>
@@ -21,7 +22,11 @@
             </div>
 
             <div id="logo-mobile">
-                <img src="/sites/default/files/portalen_logo.png" alt="Home" />
+                <?php if (!empty($logo)): ?>
+                    <a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home">
+                        <img src="<?= $logo_mobile . 'test'; ?>" alt="<?= t('Home'); ?>" />
+                    </a>
+                <?php endif; ?>
             </div>
 
             <div id="header-right">
