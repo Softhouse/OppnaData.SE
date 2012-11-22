@@ -15,7 +15,6 @@
         <header>
             <div id="logo">
                 <?php if (!empty($logo)): ?>
-
                     <a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home">
                         <img src="<?= $logo; ?>" alt="<?= t('Home'); ?>" />
                     </a>
@@ -23,7 +22,11 @@
             </div>
 
             <div id="logo-mobile">
-                <img src="/sites/default/files/portalen_logo.png" alt="Home" />
+                <?php if (!empty($logo)): ?>
+                    <a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home">
+                        <img src="<?= $logo_mobile . 'test'; ?>" alt="<?= t('Home'); ?>" />
+                    </a>
+                <?php endif; ?>
             </div>
 
             <div id="header-right">
