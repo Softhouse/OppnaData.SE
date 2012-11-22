@@ -6,7 +6,7 @@ dependencies {
     	
 }
 
-processResources << {
+processResources {
  
 	// TODO: Insert all modules under modules or sites/all/modules ???
 	// TODO: Include tinymce library
