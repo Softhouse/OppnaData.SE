@@ -53,6 +53,7 @@ processResources << {
 		from tarTree(drupal.getResource("viewfield-6.x-2.0.tar.gz"))
 		from tarTree(drupal.getResource("viewsphpfilter-6.x-1.0.tar.gz"))
 		from tarTree(drupal.getResource("menu_block-6.x-2.4.tar.gz"))
+		from zipTree(drupal.getResource("jquery_update-6.x-2.x-dev.zip"))
 		from zipTree(drupal.getResource("superfish-6.x-1.8.zip"))
 		from zipTree(drupal.getResource("admin_menu-6.x-1.8.zip"))
 		into "$buildDir/resources/main/module/modules"

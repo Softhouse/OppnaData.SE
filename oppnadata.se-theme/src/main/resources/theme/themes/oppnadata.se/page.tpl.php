@@ -12,93 +12,80 @@
 
 
     <body class="<?php print $body_classes; ?>">
-        <header>
-            <div id="logo">
-                <?php if (!empty($logo)): ?>
-                    <a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home">
-                        <img src="<?= $logo; ?>" alt="<?= t('Home'); ?>" />
-                    </a>
-                <?php endif; ?>
-            </div>
+        <div id="headerContainer">
+            <header>
+                <div id="logo">
+                    <?php if (!empty($logo)): ?>
+                        <a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home">
+                            <img src="<?= $logo; ?>" alt="<?= t('Home'); ?>" />
+                        </a>
+                    <?php endif; ?>
+                </div>
 
-            <div id="logo-mobile">
-                <?php if (!empty($logo)): ?>
-                    <a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home">
-                        <img src="<?= $logo_mobile . 'test'; ?>" alt="<?= t('Home'); ?>" />
-                    </a>
-                <?php endif; ?>
-            </div>
+                <div id="logo-mobile">
+                    <?php if (!empty($logo)): ?>
+                        <a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home">
+                            <img src="<?= $logo_mobile . 'test'; ?>" alt="<?= t('Home'); ?>" />
+                        </a>
+                    <?php endif; ?>
+                </div>
 
-            <div id="header-right">
+                <div id="header-right">
 
-                <?php if (!empty($search_box)): ?>
+                    <?php if (!empty($search_box)): ?>
 
-                    <div id="search-box">
-                        <?= $search_box; ?>
+                        <div id="search-box">
+                            <?= $search_box; ?>
 
-                    </div>
-                <?php endif; ?>
-
-            </div>
-
-            <div id="name-and-slogan">
-                <?php if (!empty($site_name)): ?>
-
-                    <h1><a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home"><?= $site_name; ?></a></h1>
-                <?php endif; ?>
-
-                <?php if (!empty($site_slogan)): ?>
-
-                    <h2><?= $site_slogan; ?></h2>
-                <?php endif; ?>
-
-            </div> <!-- /name-and-slogan -->
-
-
-            <nav class="<?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
-                <?php if (!empty($primary_links)): ?>
-
-                    <div id="primary" class="clear-block">
-                      <?= theme('links', $primary_links, array('class' => 'links primary-links')); ?>
-
-                    </div>
-                <?php endif; ?>
-
-                <?php if (!empty($secondary_links)): ?>
-
-                    <div id="secondary" class="clear-block">
-                        <?= theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
-
-                    </div>
-                <?php endif; ?>
-
-            </nav>
-
-            <?php if (!empty($header)): ?>
-
-                <div id="header-region">
-                    <?= $header; ?>
+                        </div>
+                    <?php endif; ?>
 
                 </div>
-            <?php endif; ?>
 
-        </header>
+<!--                 <div id="name-and-slogan">
+                    <?php if (!empty($site_name)): ?>
+
+                        <h1><a href="<?= $front_page; ?>" title="<?= t('Home'); ?>" rel="home"><?= $site_name; ?></a></h1>
+                    <?php endif; ?>
+
+                    <?php if (!empty($site_slogan)): ?>
+
+                        <h2><?= $site_slogan; ?></h2>
+                    <?php endif; ?>
+
+                </div>
+-->
+
+<!--
+                <nav class="<?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
+                    <?php if (!empty($primary_links)): ?>
+
+                        <div id="primary" class="clear-block">
+                          <?= theme('links', $primary_links, array('class' => 'links primary-links')); ?>
+
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (!empty($secondary_links)): ?>
+
+                        <div id="secondary" class="clear-block">
+                            <?= theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
+
+                        </div>
+                    <?php endif; ?>
+
+                </nav>
+
+-->
+                <nav id="nav">
+
+                </nav>
+
+            </header>
+        </div>
 
 
-
-
-        <?php if (!empty($left)): ?>
-            <aside id="sidebar-left" class="column sidebar">
-
-                <?= $left; ?>
-
-            </aside>
-        <?php endif; ?>
-
-
-
-
-        <div id="main">
+        <div id="content">
             <?php if (!empty($breadcrumb)): ?><div id="breadcrumb"><?= $breadcrumb; ?></div><?php endif; ?>
 
             <?php if (!empty($mission)): ?><div id="mission"><?= $mission; ?></div><?php endif; ?>
