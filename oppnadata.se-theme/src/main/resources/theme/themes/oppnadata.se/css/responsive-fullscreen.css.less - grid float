@@ -1,0 +1,60 @@
+
+
+@media all and (min-width: @BP2) {
+
+
+    // HEADER
+
+    header {
+        #logo {
+            display: block;
+            .column(6);
+        }
+        #logo-mobile {
+            display: none;
+        }
+
+        #search-box {
+            .column (6);
+            text-align: right;
+        }
+
+        #primary {
+            .column(12);
+            ul {
+                text-align: center;
+            }
+        }
+
+        #nav {
+            .column(12);
+        }
+
+    }
+
+
+
+
+
+    // SIDEBARS
+
+    aside#sidebar-left {
+        .column(2);
+    }
+
+    aside#sidebar-right {
+        .column(2)
+    }
+
+
+    // MAIN
+    #content {
+        display: block;
+        position: relative;
+        vertical-align: baseline;
+        width: 988px;
+        max-width: 988px;
+    }
+
+
+}

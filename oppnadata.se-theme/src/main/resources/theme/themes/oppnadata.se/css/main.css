@@ -23,6 +23,7 @@ h4 {
   font-family: "Gill Sans", "Calibri Light", sans-serif;
   text-transform: uppercase;
   color: #446aa1;
+  margin-left: 1em;
 }
 a {
   color: #b85b69;
@@ -42,10 +43,6 @@ div.item-list ul li {
   text-decoration: none;
   text-transform: uppercase;
 }
-#sidebar-left p a img {
-  height: 150px;
-  width: 150px;
-}
 #main section h2 a {
   color: #4d3075;
 }
@@ -63,9 +60,6 @@ aside ul.menu a {
 }
 aside ul.menu ul a {
   color: #313230;
-}
-#user-login-form {
-  text-align: left !important;
 }
 @media all and (max-width: 570px) {
   #logo {
@@ -102,7 +96,7 @@ aside ul.menu ul a {
     margin: 0 1.0416666666667%;
   }
 }
-@media all and (min-width: 570px) and (max-width: 1024px) {
+@media all and (min-width: 570px) and (max-width: 1000px) {
   #logo {
     display: block;
   }
@@ -128,56 +122,113 @@ aside ul.menu ul a {
     margin: 0 1.0416666666667%;
   }
 }
-@media all and (min-width: 1024px) {
-  header #logo {
+@media all and (min-width: 1000px) {
+  body {
+    background-color: #ffffff;
+  }
+  #header-container {
     display: block;
-    display: inline;
-    float: left;
-    width: 47.916666666667%;
-    margin: 0 1.0416666666667%;
+    clear: both;
+    width: 100%;
+    height: 110px;
+    margin: 0 0 0 0;
+    background-color: #ffffff;
   }
-  header #logo-mobile {
-    display: none;
+  #header-container header {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+    width: 998px;
+    background-color: black;
   }
-  header #search-box {
-    display: inline;
-    float: left;
-    width: 47.916666666667%;
-    margin: 0 1.0416666666667%;
-    text-align: right;
-  }
-  header #name-and-slogan {
-    display: inline;
-    float: left;
-    width: 97.916666666667%;
-    margin: 0 1.0416666666667%;
-  }
-  header #primary {
-    display: inline;
-    float: left;
-    width: 97.916666666667%;
-    margin: 0 1.0416666666667%;
-  }
-  header #primary ul {
-    text-align: center;
-  }
-  aside#sidebar-left {
-    display: inline;
-    float: left;
-    width: 14.583333333333%;
-    margin: 0 1.0416666666667%;
-  }
-  aside#sidebar-right {
-    display: inline;
-    float: left;
-    width: 14.583333333333%;
-    margin: 0 1.0416666666667%;
-  }
-  #main {
+  #logo {
     display: inline;
     float: left;
     width: 64.583333333333%;
     margin: 0 1.0416666666667%;
+  }
+  #logo-mobile {
+    display: none;
+  }
+  #header-right {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.0416666666667%;
+    text-align: right;
+  }
+  #nav-container {
+    background-color: #ffffff;
+    overflow: auto;
+  }
+  #nav-container #nav {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+    width: 998px;
+    background-color: #ffffff;
+  }
+  #content {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    display: block;
+    width: 998px;
+    max-width: 998px;
+    overflow: auto;
+    min-height: 400px;
+  }
+  #content section {
+    display: inline;
+    float: left;
+    width: 64.583333333333%;
+    margin: 0 1.0416666666667%;
+  }
+  #content section #content-content .node {
+    background-color: #FCFFC9;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
+    margin-top: 2em;
+  }
+  #content section #content-content .node p {
+    margin-left: 1em;
+  }
+  #content section #content-content .node .meta {
+    margin-left: 1em;
+  }
+  #content aside#sidebar-right {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.0416666666667%;
+    background-color: #ffffff;
+  }
+  #content aside#sidebar-right .block {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
+  }
+  footer {
+    display: block;
+    clear: both;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 60px;
+    overflow: auto;
+  }
+  footer #footer-content {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+    width: 998px;
+    background-color: #ffffff;
   }
 }
 .sf-menu.sf-style-none {
