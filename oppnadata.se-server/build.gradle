@@ -18,6 +18,8 @@ dependencies {
 	compile tdrBootstrap
 	compile jclClassLoader
 	compile commonsLogging
+	compile project(':quercus-runtime')
+	compile project(':drupal-runtime')
 }
 
 processResources << {
@@ -52,6 +54,13 @@ processResources << {
 		include 'bootstrap**'
 		include 'jcl**'
 		include 'commons-logging**'
+	}
+	
+	copy {
+		into "$buildDir/dist/oppnadata-se-server-" + version + "/osgi/deploy"
+		from configurations.compile
+		include 'quercus-runtime**'
+		include 'drupal-runtime**'
 	}
 
 }

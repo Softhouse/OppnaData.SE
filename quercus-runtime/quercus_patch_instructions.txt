@@ -1,0 +1,69 @@
+* QuercusModule.java:
+
+Change:
+
+   /**
+   * Adds a java class
+   */
+  public JavaClassDef getJavaClassDefinition(Class<?> type, String className)
+  {
+    JavaClassDef def;
+
+    if (_classNotFoundCache.get(className) != null)
+      return null;
+
+    def = _javaClassWrappers.get(className);
+
+    if (def == null) {
+      try {
+        def = getModuleContext().getJavaClassDefinition(type, className);
+        
+To:
+
+    /**
+   * Adds a java class
+   */
+  public JavaClassDef getJavaClassDefinition(Class<?> type, String className)
+  {
+    JavaClassDef def;
+
+    if (_classNotFoundCache.get(className) != null)
+      return null;
+
+    def = _javaClassWrappers.get(className);
+    
+    if (def == null || def.getType() != type) {
+      try {
+        def = getModuleContext().getJavaClassDefinition(type, className);
+        
+* ModuleContext.java:
+
+Change:
+
+ /**
+   * Gets or creates a JavaClassDef for the given class name.
+   */
+  public JavaClassDef getJavaClassDefinition(Class<?> type, String className)
+  {
+    JavaClassDef def;
+
+    synchronized (_javaClassWrappers) {
+      def = _javaClassWrappers.get(className);
+
+      if (def != null)
+        return def;
+  
+ To:
+ 
+  /**
+   * Gets or creates a JavaClassDef for the given class name.
+   */
+  public JavaClassDef getJavaClassDefinition(Class<?> type, String className)
+  {
+    JavaClassDef def;
+    
+    synchronized (_javaClassWrappers) {
+      def = _javaClassWrappers.get(className);
+   
+      if (def != null && def.getType() == type)
+        return def;

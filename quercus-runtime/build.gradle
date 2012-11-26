@@ -3,7 +3,7 @@
 version = "0.0.1"
 
 dependencies {
-	compile files('src/main/resources/lib/resin.jar') // quercus
+	compile files('src/main/resources/lib/quercus.jar', 'src/main/resources/lib/resin-kernel.jar')  // resin.jar') // quercus
 	compile tdrBootstrap
 	compile karafMain
 	compile javaxServlet
