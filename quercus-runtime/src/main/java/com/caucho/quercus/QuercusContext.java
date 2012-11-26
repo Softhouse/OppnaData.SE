@@ -50,6 +50,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import org.tdr.bootstrap.TLSReference;
+
 import com.caucho.config.ConfigException;
 import com.caucho.java.JavaCompilerUtil;
 import com.caucho.quercus.annotation.ClassImplementation;

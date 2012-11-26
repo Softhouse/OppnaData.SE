@@ -1,3 +1,8 @@
+
+// TODO: Describe how to build new Quercus JAR files
+
+// TODO: Add extra code for class loader specials
+
 * QuercusModule.java:
 
 Change:
@@ -67,3 +72,74 @@ Change:
    
       if (def != null && def.getType() == type)
         return def;
+        
+* ModuleContext:
+
+From:
+
+  /**
+   * Adds a java class
+   */
+  public JavaClassDef getJavaClassDefinition(String className)
+  {
+    // Note, this method must not trigger an introspection to avoid
+    // any race conditions.  It is only responsible for creating the
+    // wrapper around the class, i.e. it's a leaf node, not a recursive not
+
+    synchronized (_javaClassWrappers) {
+      JavaClassDef def = _javaClassWrappers.get(className);
+
+      if (def != null)
+        return def;
+
+      try {
+        Class<?> type;
+
+        try {
+          type = Class.forName(className, false, _loader);
+        }
+        catch (ClassNotFoundException e) {
+	          throw new ClassNotFoundException(L.l("'{0}' is not a known Java class: {1}",
+	                                               className,
+	                                               e.toString()), e);
+          }
+        } 
+
+To:
+
+  /**
+   * Adds a java class
+   */
+  public JavaClassDef getJavaClassDefinition(String className)
+  {
+    // Note, this method must not trigger an introspection to avoid
+    // any race conditions.  It is only responsible for creating the
+    // wrapper around the class, i.e. it's a leaf node, not a recursive not
+
+    synchronized (_javaClassWrappers) {
+      JavaClassDef def = _javaClassWrappers.get(className);
+
+      if (def != null)
+        return def;
+
+      try {
+        Class<?> type;
+
+        try {
+          type = Class.forName(className, false, _loader);
+        }
+        catch (ClassNotFoundException e) {
+        	
+          // Try loading with the service class loader (if any)
+          //
+          Object currentService = QuercusServiceReference.get();
+          if ( currentService != null ) {
+        	  type = currentService.getClass().getClassLoader().loadClass(className);
+          }
+          else {
+	          throw new ClassNotFoundException(L.l("'{0}' is not a known Java class: {1}",
+	                                               className,
+	                                               e.toString()), e);
+          }
+        } 
+

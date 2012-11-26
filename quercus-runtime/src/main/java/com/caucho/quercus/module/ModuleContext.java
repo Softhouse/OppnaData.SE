@@ -62,6 +62,10 @@ import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.tdr.bootstrap.TLSReference;
+
+import se.oppnadata.portal.quercus.runtime.QuercusServiceReference;
+
 /**
  * Class-loader specific context for loaded PHP.
  */
@@ -315,10 +319,20 @@ public class ModuleContext
           type = Class.forName(className, false, _loader);
         }
         catch (ClassNotFoundException e) {
-          throw new ClassNotFoundException(L.l("'{0}' is not a known Java class: {1}",
-                                               className,
-                                               e.toString()), e);
-        } catch (NoClassDefFoundError e) {
+        	
+          // Try loading with the service class loader (if any)
+          //
+          Object currentService = QuercusServiceReference.get();
+          if ( currentService != null ) {
+        	  type = currentService.getClass().getClassLoader().loadClass(className);
+          }
+          else {
+	          throw new ClassNotFoundException(L.l("'{0}' is not a known Java class: {1}",
+	                                               className,
+	                                               e.toString()), e);
+          }
+        } 
+        catch (NoClassDefFoundError e) {
           throw new ClassNotFoundException(L.l("'{0}' cannot be as a Java class: {1}",
                                                className,
                                                e.toString()), e);

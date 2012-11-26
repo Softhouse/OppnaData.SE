@@ -3,6 +3,7 @@ package se.oppnadata.portal.quercus.runtime;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.tdr.bootstrap.GlobalReference;
+import org.tdr.bootstrap.TLSReference;
 
 import com.caucho.quercus.env.Env;
 import com.caucho.quercus.module.AbstractQuercusModule;
@@ -18,7 +19,9 @@ public class ServiceModule extends AbstractQuercusModule {
 			for ( ServiceReference serviceRef : serviceReferences ) {
 				String name = (String) serviceRef.getProperty("serviceName");
 				if ( name != null && serviceName.equals(name) ) {
-					return this.bundleContext.getService(serviceRef);
+					Object service = this.bundleContext.getService(serviceRef);
+					QuercusServiceReference.set(service);
+					return service;
 				}
 			}
 		}
