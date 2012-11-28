@@ -12,6 +12,8 @@
 
 
 <body class="<?php print $body_classes; ?>">
+
+
     <div id="header-container">
         <header>
             <div id="logo">

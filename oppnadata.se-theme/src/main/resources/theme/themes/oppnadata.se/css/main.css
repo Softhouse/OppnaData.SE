@@ -178,7 +178,6 @@ aside ul.menu ul a {
     width: 998px;
     max-width: 998px;
     overflow: auto;
-    min-height: 400px;
   }
   #content section {
     display: inline;
@@ -188,9 +187,6 @@ aside ul.menu ul a {
   }
   #content section #content-content .node {
     background-color: #FCFFC9;
-    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
-    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
     margin-top: 2em;
   }
   #content section #content-content .node p {
@@ -206,21 +202,12 @@ aside ul.menu ul a {
     margin: 0 1.0416666666667%;
     background-color: #ffffff;
   }
-  #content aside#sidebar-right .block {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
-    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
-  }
   footer {
     display: block;
     clear: both;
     width: 100%;
     background-color: #ffffff;
     margin-top: 60px;
-    overflow: auto;
   }
   footer #footer-content {
     margin-left: auto;
