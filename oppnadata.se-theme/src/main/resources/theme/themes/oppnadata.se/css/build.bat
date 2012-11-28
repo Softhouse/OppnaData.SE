@@ -1,2 +1,2 @@
 cd ../../../../../../../
-gradle build
+gradle deploy
