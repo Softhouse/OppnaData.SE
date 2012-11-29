@@ -5,7 +5,12 @@
     <servlet-name>Quercus Servlet</servlet-name>
     <servlet-class>com.caucho.quercus.servlet.QuercusServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
-
+    
+    <init-param>
+      <param-name>compile</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    
     <!--
       Specifies the encoding Quercus should use to read in PHP scripts.
     -->
@@ -13,22 +18,22 @@
       <param-name>script-encoding</param-name>
       <param-value>UTF-8</param-value>
     </init-param>
-
+	
     <!--
       Tells Quercus to use the following JDBC database and to ignore the
       arguments of mysql_connect().
     -->
+    <!--  
     <init-param>
       <param-name>database</param-name>
       <param-value>jdbc/phpdatabase</param-value>
     </init-param>
-
-    <!--
+	-->
+	
     <init-param>
       <param-name>ini-file</param-name>
       <param-value>WEB-INF/php.ini</param-value>
     </init-param>
-    -->
     
     <!--
       Location of the license to enable php to java compilation.

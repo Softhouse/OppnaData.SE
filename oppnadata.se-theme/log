@@ -1,0 +1,276 @@
+14:49:00.953 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:01.390 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:01.390 [INFO] [org.gradle.BuildLogger] Starting Build
+14:49:01.390 [DEBUG] [org.gradle.BuildLogger] Gradle user home: C:\Users\mla\.gradle
+14:49:01.405 [DEBUG] [org.gradle.BuildLogger] Current dir: C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme
+14:49:01.405 [DEBUG] [org.gradle.BuildLogger] Settings file: null
+14:49:01.405 [DEBUG] [org.gradle.BuildLogger] Build file: null
+14:49:01.405 [DEBUG] [org.gradle.initialization.BuildSourceBuilder] Starting to build the build sources.
+14:49:01.405 [DEBUG] [org.gradle.initialization.BuildSourceBuilder] Gradle source dir does not exist. We leave.
+14:49:01.405 [DEBUG] [org.gradle.initialization.DefaultGradlePropertiesLoader] Found env project properties: []
+14:49:01.405 [DEBUG] [org.gradle.initialization.DefaultGradlePropertiesLoader] Found system project properties: []
+14:49:01.499 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\mla\.m2\repository
+14:49:01.671 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for settings file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\settings.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\settings_4dvbdrdri7269214oo8gd1qa8g\SettingsScript\buildscript).
+14:49:01.671 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:01.764 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:01.780 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for settings file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\settings.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\settings_4dvbdrdri7269214oo8gd1qa8g\SettingsScript\no_buildscript).
+14:49:01.780 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:01.827 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:01.827 [DEBUG] [org.gradle.initialization.ScriptEvaluatingSettingsProcessor] Timing: Processing settings took: 0.422 secs
+14:49:01.827 [INFO] [org.gradle.BuildLogger] Settings evaluated using settings file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\settings.gradle'.
+14:49:01.936 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\mla\Documents\GitHub\OppnaData.SE\gradle.properties
+14:49:01.936 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+14:49:01.967 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\gradle.properties
+14:49:01.967 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-service\gradle.properties
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-base-modules\gradle.properties
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-field-module\gradle.properties
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\mla\Documents\GitHub\OppnaData.SE\quercus-runtime\gradle.properties
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-server\gradle.properties
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-runtime\gradle.properties
+14:49:01.983 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+14:49:01.983 [INFO] [org.gradle.BuildLogger] Projects loaded. Root project using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\build.gradle'.
+14:49:01.983 [INFO] [org.gradle.BuildLogger] Included projects: [root project 'OppnaData.SE', project ':ckan-field-module', project ':ckan-service', project ':drupal-base-modules', project ':drupal-runtime', project ':oppnadata.se-server', project ':oppnadata.se-theme', project ':quercus-runtime']
+14:49:01.998 [INFO] [org.gradle.configuration.BuildScriptProcessor] Evaluating root project 'OppnaData.SE' using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\build.gradle'.
+14:49:01.998 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_3cqvem6vgsbd8llpktumhfg2sb\ProjectScript\buildscript).
+14:49:01.998 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:02.217 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:02.217 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultDependencyResolver] Resolving configuration ':classpath'
+14:49:02.232 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.default.settings.dir' to 'jar:file:/C:/Program%20Files/gradle-1.2/lib/ivy-2.2.0.jar!/org/apache/ivy/core/settings'
+14:49:02.232 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.basedir' to 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\.'
+14:49:02.232 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.default.conf.dir' to 'jar:file:/C:/Program%20Files/gradle-1.2/lib/ivy-2.2.0.jar!/org/apache/ivy/core/settings'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.runtime.name' to 'Java(TM) SE Runtime Environment'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.boot.library.path' to 'C:\Java\jdk1.7.0_09\jre\bin'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.version' to '23.5-b02'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.vendor' to 'Oracle Corporation'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor.url' to 'http://java.oracle.com/'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'path.separator' to ';'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.name' to 'Java HotSpot(TM) 64-Bit Server VM'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.encoding.pkg' to 'sun.io'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.country' to 'US'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.script' to ''
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.java.launcher' to 'SUN_STANDARD'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.os.patch.level' to 'Service Pack 1'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.name' to 'Java Virtual Machine Specification'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.dir' to 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.runtime.version' to '1.7.0_09-b05'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.awt.graphicsenv' to 'sun.awt.Win32GraphicsEnvironment'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.endorsed.dirs' to 'C:\Java\jdk1.7.0_09\jre\lib\endorsed'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.arch' to 'amd64'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.io.tmpdir' to 'C:\Users\mla\AppData\Local\Temp\'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'line.separator' to '
+'
+14:49:02.263 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'org.gradle.appname' to 'gradle'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.vendor' to 'Oracle Corporation'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.variant' to ''
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.name' to 'Windows 7'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'jna.boot.library.path' to 'C:\Users\mla\.gradle\jna'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.jnu.encoding' to 'UTF-8'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.library.path' to 'C:\Java\jdk1.7.0_09\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared\;C:\Program Files (x86)\Roxio\OEM\AudioCore\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\Program Files\TortoiseSVN\bin;C:\wamp\bin\mysql\mysql5.5.24\bin;C:\wamp\bin\php\php5.4.3;C:\Program Files\gradle-1.2\bin;C:\Python27;C:\Python27\Lib\site-packages;C:\Program Files (x86)\Hewlett-Packard\HP ProtectTools Security Manager\Bin;C:\Program Files (x86)\OpenVPN\bin;.'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.class.version' to '51.0'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.name' to 'Java Platform API Specification'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.management.compiler' to 'HotSpot 64-Bit Tiered Compilers'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.version' to '6.1'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.home' to 'C:\Users\mla'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.timezone' to 'Europe/Berlin'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.awt.printerjob' to 'sun.awt.windows.WPrinterJob'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.version' to '1.7'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.encoding' to 'UTF-8'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.name' to 'mla'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.class.path' to 'C:\Program Files\gradle-1.2\bin\..\lib\gradle-launcher-1.2.jar'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.version' to '1.7'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.arch.data.model' to '64'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.java.command' to 'org.gradle.launcher.GradleMain -d deploy'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.home' to 'C:\Java\jdk1.7.0_09\jre'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.vendor' to 'Oracle Corporation'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.language' to 'en'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'awt.toolkit' to 'sun.awt.windows.WToolkit'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.info' to 'mixed mode'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.version' to '1.7.0_09'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.ext.dirs' to 'C:\Java\jdk1.7.0_09\jre\lib\ext;C:\windows\Sun\Java\lib\ext'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.boot.class.path' to 'C:\Java\jdk1.7.0_09\jre\lib\resources.jar;C:\Java\jdk1.7.0_09\jre\lib\rt.jar;C:\Java\jdk1.7.0_09\jre\lib\sunrsasign.jar;C:\Java\jdk1.7.0_09\jre\lib\jsse.jar;C:\Java\jdk1.7.0_09\jre\lib\jce.jar;C:\Java\jdk1.7.0_09\jre\lib\charsets.jar;C:\Java\jdk1.7.0_09\jre\lib\jfr.jar;C:\Java\jdk1.7.0_09\jre\classes'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor' to 'Oracle Corporation'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.separator' to '\'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor.url.bug' to 'http://bugreport.sun.com/bugreport/'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.io.unicode.encoding' to 'UnicodeLittle'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.cpu.endian' to 'little'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.desktop' to 'windows'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.cpu.isalist' to 'amd64'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.cache.dir' to 'C:\Users\mla\.gradle\caches\artifacts-14\ivy'
+14:49:02.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.log.modules.in.use' to 'false'
+14:49:02.341 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Visiting configuration #OppnaData.SE;unspecified(classpath).
+14:49:02.341 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Visiting dependency #OppnaData.SE;unspecified(classpath) -> com.smokejumperit#gradle-plugins;0.8.2([default])
+14:49:02.341 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Selecting new module version com.smokejumperit#gradle-plugins;0.8.2
+14:49:02.341 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.UserResolverChain] Attempting to resolve module 'com.smokejumperit#gradle-plugins;0.8.2' using repositories '[maven]'
+14:49:02.341 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on artifact cache (C:\Users\mla\.gradle\caches\artifacts-14).
+14:49:02.341 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:02.357 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache dynamic-revisions.bin (C:\Users\mla\.gradle\caches\artifacts-14\dynamic-revisions.bin)
+14:49:02.357 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache module-metadata.bin (C:\Users\mla\.gradle\caches\artifacts-14\module-metadata.bin)
+14:49:02.404 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] post 1.3 ivy file: using exact as default matcher
+14:49:02.404 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleVersionRepository] Using cached module metadata for module 'com.smokejumperit#gradle-plugins;0.8.2' in 'maven'
+14:49:02.404 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.UserResolverChain] Using module 'com.smokejumperit#gradle-plugins;0.8.2' from repository 'maven'
+14:49:02.404 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Visiting configuration com.smokejumperit#gradle-plugins;0.8.2(default).
+14:49:02.404 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Attaching #OppnaData.SE;unspecified(classpath) to its parents.
+14:49:02.419 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Attaching com.smokejumperit#gradle-plugins;0.8.2(compile) to its parents.
+14:49:02.419 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Attaching com.smokejumperit#gradle-plugins;0.8.2(runtime) to its parents.
+14:49:02.419 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Attaching com.smokejumperit#gradle-plugins;0.8.2(master) to its parents.
+14:49:02.419 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DependencyGraphBuilder] Attaching com.smokejumperit#gradle-plugins;0.8.2(default) to its parents.
+14:49:02.419 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (C:\Users\mla\.gradle\caches\artifacts-14\module-metadata.bin)
+14:49:02.419 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache dynamic-revisions.bin (C:\Users\mla\.gradle\caches\artifacts-14\dynamic-revisions.bin)
+14:49:02.419 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (C:\Users\mla\.gradle\caches\artifacts-14).
+14:49:02.435 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.UserResolverChain] Attempting to download com.smokejumperit#gradle-plugins;0.8.2!gradle-plugins.jar using repository 'maven'
+14:49:02.435 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on artifact cache (C:\Users\mla\.gradle\caches\artifacts-14).
+14:49:02.435 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:02.435 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache artifact-at-repository.bin (C:\Users\mla\.gradle\caches\artifacts-14\artifact-at-repository.bin)
+14:49:02.435 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleVersionRepository] Found artifact 'com.smokejumperit#gradle-plugins;0.8.2!gradle-plugins.jar' in resolver cache: C:\Users\mla\.gradle\caches\artifacts-14\filestore\com.smokejumperit\gradle-plugins\0.8.2\jar\53f0d32f245c831297e2370364c53d338ba14215\gradle-plugins-0.8.2.jar
+14:49:02.435 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache artifact-at-repository.bin (C:\Users\mla\.gradle\caches\artifacts-14\artifact-at-repository.bin)
+14:49:02.435 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (C:\Users\mla\.gradle\caches\artifacts-14).
+14:49:02.451 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_3cqvem6vgsbd8llpktumhfg2sb\ProjectScript\no_buildscript).
+14:49:02.451 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:03.574 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\mla\.m2\repository
+14:49:03.667 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\mla\.m2\repository
+14:49:03.714 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\mla\.m2\repository
+14:49:03.761 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\mla\.m2\repository
+14:49:03.792 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\mla\.m2\repository
+14:49:03.823 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\mla\.m2\repository
+14:49:03.855 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\mla\.m2\repository
+14:49:03.870 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:03.870 [DEBUG] [org.gradle.configuration.BuildScriptProcessor] Timing: Running the build script took 1.872 secs
+14:49:03.901 [INFO] [org.gradle.configuration.BuildScriptProcessor] Evaluating project ':ckan-field-module' using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-field-module\build.gradle'.
+14:49:03.901 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-field-module\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_32ef18htpnosg5piqk9c2jtke2\ProjectScript\buildscript).
+14:49:03.901 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:03.917 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:03.917 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-field-module\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_32ef18htpnosg5piqk9c2jtke2\ProjectScript\no_buildscript).
+14:49:03.917 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:03.917 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:03.917 [DEBUG] [org.gradle.configuration.BuildScriptProcessor] Timing: Running the build script took 0.016 secs
+14:49:03.917 [INFO] [org.gradle.configuration.BuildScriptProcessor] Evaluating project ':ckan-service' using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-service\build.gradle'.
+14:49:03.917 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-service\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_28l3qddgiku1s3np31d9qnsg5m\ProjectScript\buildscript).
+14:49:03.917 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:03.933 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:03.933 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-service\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_28l3qddgiku1s3np31d9qnsg5m\ProjectScript\no_buildscript).
+14:49:03.933 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.089 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.089 [DEBUG] [org.gradle.configuration.BuildScriptProcessor] Timing: Running the build script took 0.172 secs
+14:49:04.089 [INFO] [org.gradle.configuration.BuildScriptProcessor] Evaluating project ':drupal-base-modules' using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-base-modules\build.gradle'.
+14:49:04.089 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-base-modules\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_4731ncvpk1bgt5fd8m4m7kvf25\ProjectScript\buildscript).
+14:49:04.089 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.089 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.104 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-base-modules\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_4731ncvpk1bgt5fd8m4m7kvf25\ProjectScript\no_buildscript).
+14:49:04.104 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.104 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.104 [DEBUG] [org.gradle.configuration.BuildScriptProcessor] Timing: Running the build script took 0.015 secs
+14:49:04.104 [INFO] [org.gradle.configuration.BuildScriptProcessor] Evaluating project ':drupal-runtime' using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-runtime\build.gradle'.
+14:49:04.104 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-runtime\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_pgutr23ceeic87c432n4920ch\ProjectScript\buildscript).
+14:49:04.120 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.120 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.120 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-runtime\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_pgutr23ceeic87c432n4920ch\ProjectScript\no_buildscript).
+14:49:04.120 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.120 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.135 [DEBUG] [org.gradle.configuration.BuildScriptProcessor] Timing: Running the build script took 0.031 secs
+14:49:04.135 [INFO] [org.gradle.configuration.BuildScriptProcessor] Evaluating project ':oppnadata.se-server' using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-server\build.gradle'.
+14:49:04.135 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-server\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_6901c92bbks3cvloqouvnucdlc\ProjectScript\buildscript).
+14:49:04.135 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.135 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.135 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-server\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_6901c92bbks3cvloqouvnucdlc\ProjectScript\no_buildscript).
+14:49:04.135 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.198 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.198 [DEBUG] [org.gradle.configuration.BuildScriptProcessor] Timing: Running the build script took 0.063 secs
+14:49:04.198 [INFO] [org.gradle.configuration.BuildScriptProcessor] Evaluating project ':oppnadata.se-theme' using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build.gradle'.
+14:49:04.198 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_182icjdajemeqk2o7ptlduikh1\ProjectScript\buildscript).
+14:49:04.198 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.198 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.198 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_182icjdajemeqk2o7ptlduikh1\ProjectScript\no_buildscript).
+14:49:04.198 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.213 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.213 [DEBUG] [org.gradle.configuration.BuildScriptProcessor] Timing: Running the build script took 0.015 secs
+14:49:04.213 [INFO] [org.gradle.configuration.BuildScriptProcessor] Evaluating project ':quercus-runtime' using build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\quercus-runtime\build.gradle'.
+14:49:04.213 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\quercus-runtime\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_3u0ohta20k6fsfd54ll6hvtvbb\ProjectScript\buildscript).
+14:49:04.213 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.213 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.229 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\quercus-runtime\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_3u0ohta20k6fsfd54ll6hvtvbb\ProjectScript\no_buildscript).
+14:49:04.229 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.260 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]
+14:49:04.260 [DEBUG] [org.gradle.configuration.BuildScriptProcessor] Timing: Running the build script took 0.047 secs
+14:49:04.260 [INFO] [org.gradle.BuildLogger] All projects evaluated.
+14:49:04.369 [DEBUG] [org.gradle.execution.taskgraph.DefaultTaskGraphExecuter] Timing: Creating the DAG took 0.109 secs
+14:49:04.369 [INFO] [org.gradle.execution.TaskNameResolvingBuildConfigurationAction] Selected primary task 'deploy'
+14:49:04.369 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on task artifact state cache (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts).
+14:49:04.369 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+14:49:04.369 [INFO] [org.gradle.BuildLogger] Tasks to be executed: [task ':oppnadata.se-theme:compileJava', task ':oppnadata.se-theme:processResources', task ':oppnadata.se-theme:classes', task ':oppnadata.se-theme:jar', task ':oppnadata.se-theme:deploy']
+14:49:04.369 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:compileJava
+14:49:04.369 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':oppnadata.se-theme:compileJava'
+14:49:04.369 [INFO] [org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter] Skipping task ':oppnadata.se-theme:compileJava' as it has no source files.
+14:49:04.369 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':oppnadata.se-theme:compileJava'
+14:49:04.369 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:compileJava UP-TO-DATE
+14:49:04.385 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:processResources
+14:49:04.385 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':oppnadata.se-theme:processResources'
+14:49:04.401 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':oppnadata.se-theme:processResources' is up-to-date
+14:49:04.401 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache taskArtifacts.bin (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts\taskArtifacts.bin)
+14:49:04.416 [DEBUG] [org.gradle.api.internal.changedetection.DefaultFileCacheListener] Can cache files for directory 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\src\main\resources'
+14:49:04.416 [DEBUG] [org.gradle.api.internal.changedetection.DefaultFileCacheListener] Can cache files for file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build\resources\main'
+14:49:04.416 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache outputFileStates.bin (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts\outputFileStates.bin)
+14:49:04.416 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache fileHashes.bin (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts\fileHashes.bin)
+14:49:04.479 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache fileSnapshots.bin (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts\fileSnapshots.bin)
+14:49:04.479 [INFO] [org.gradle.api.internal.changedetection.DefaultTaskArtifactStateRepository] Skipping task ':oppnadata.se-theme:processResources' as it is up-to-date.
+14:49:04.479 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Skipping task ':oppnadata.se-theme:processResources' as it is up-to-date
+14:49:04.479 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':oppnadata.se-theme:processResources'
+14:49:04.479 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:processResources UP-TO-DATE
+14:49:04.479 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:classes
+14:49:04.479 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':oppnadata.se-theme:classes'
+14:49:04.479 [INFO] [org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter] Skipping task ':oppnadata.se-theme:classes' as it has no actions.
+14:49:04.479 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':oppnadata.se-theme:classes'
+14:49:04.479 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:classes UP-TO-DATE
+14:49:04.479 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:jar
+14:49:04.479 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':oppnadata.se-theme:jar'
+14:49:04.494 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':oppnadata.se-theme:jar' is up-to-date
+14:49:04.510 [DEBUG] [org.gradle.api.internal.changedetection.DefaultFileCacheListener] Can cache files for file tree
+14:49:04.510 [DEBUG] [org.gradle.api.internal.changedetection.DefaultFileCacheListener] Can cache files for directory 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build\resources\main'
+14:49:04.510 [DEBUG] [org.gradle.api.internal.changedetection.DefaultFileCacheListener] Can cache files for file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build\libs\oppnadata.se-theme-0.0.1.jar'
+14:49:04.541 [INFO] [org.gradle.api.internal.changedetection.DefaultTaskArtifactStateRepository] Skipping task ':oppnadata.se-theme:jar' as it is up-to-date.
+14:49:04.541 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Skipping task ':oppnadata.se-theme:jar' as it is up-to-date
+14:49:04.541 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':oppnadata.se-theme:jar'
+14:49:04.541 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:jar UP-TO-DATE
+14:49:04.541 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:deploy
+14:49:04.541 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':oppnadata.se-theme:deploy'
+14:49:04.541 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':oppnadata.se-theme:deploy' is up-to-date
+14:49:04.557 [DEBUG] [org.gradle.api.internal.changedetection.DefaultFileCacheListener] Can cache files for directory 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build\libs'
+14:49:04.557 [DEBUG] [org.gradle.api.internal.changedetection.DefaultFileCacheListener] Can cache files for file 'C:\Users\mla\Documents\GitHub\tomcat-server\osgi\deploy'
+14:49:04.557 [INFO] [org.gradle.api.internal.changedetection.DefaultTaskArtifactStateRepository] Skipping task ':oppnadata.se-theme:deploy' as it is up-to-date.
+14:49:04.557 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Skipping task ':oppnadata.se-theme:deploy' as it is up-to-date
+14:49:04.557 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':oppnadata.se-theme:deploy'
+14:49:04.557 [LIFECYCLE] [org.gradle.TaskExecutionLogger] :oppnadata.se-theme:deploy UP-TO-DATE
+14:49:04.557 [DEBUG] [org.gradle.execution.taskgraph.DefaultTaskGraphExecuter] Timing: Executing the DAG took 0.188 secs
+14:49:04.557 [LIFECYCLE] [org.gradle.BuildResultLogger] 
+14:49:04.557 [LIFECYCLE] [org.gradle.BuildResultLogger] BUILD SUCCESSFUL
+14:49:04.557 [LIFECYCLE] [org.gradle.BuildResultLogger] 
+14:49:04.557 [LIFECYCLE] [org.gradle.BuildResultLogger] Total time: 3.869 secs
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts\fileHashes.bin)
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileSnapshots.bin (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts\fileSnapshots.bin)
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache outputFileStates.bin (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts\outputFileStates.bin)
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache taskArtifacts.bin (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts\taskArtifacts.bin)
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on task artifact state cache (C:\Users\mla\Documents\GitHub\OppnaData.SE\.gradle\1.2\taskArtifacts).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\quercus-runtime\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_3u0ohta20k6fsfd54ll6hvtvbb\ProjectScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\quercus-runtime\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_3u0ohta20k6fsfd54ll6hvtvbb\ProjectScript\buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_182icjdajemeqk2o7ptlduikh1\ProjectScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-theme\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_182icjdajemeqk2o7ptlduikh1\ProjectScript\buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-server\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_6901c92bbks3cvloqouvnucdlc\ProjectScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\oppnadata.se-server\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_6901c92bbks3cvloqouvnucdlc\ProjectScript\buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-runtime\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_pgutr23ceeic87c432n4920ch\ProjectScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-runtime\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_pgutr23ceeic87c432n4920ch\ProjectScript\buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-base-modules\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_4731ncvpk1bgt5fd8m4m7kvf25\ProjectScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\drupal-base-modules\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_4731ncvpk1bgt5fd8m4m7kvf25\ProjectScript\buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-service\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_28l3qddgiku1s3np31d9qnsg5m\ProjectScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-service\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_28l3qddgiku1s3np31d9qnsg5m\ProjectScript\buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-field-module\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_32ef18htpnosg5piqk9c2jtke2\ProjectScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\ckan-field-module\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_32ef18htpnosg5piqk9c2jtke2\ProjectScript\buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_3cqvem6vgsbd8llpktumhfg2sb\ProjectScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\build.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\build_3cqvem6vgsbd8llpktumhfg2sb\ProjectScript\buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for settings file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\settings.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\settings_4dvbdrdri7269214oo8gd1qa8g\SettingsScript\no_buildscript).
+14:49:04.572 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for settings file 'C:\Users\mla\Documents\GitHub\OppnaData.SE\settings.gradle' (C:\Users\mla\.gradle\caches\1.2\scripts\settings_4dvbdrdri7269214oo8gd1qa8g\SettingsScript\buildscript).
+14:49:04.588 [DEBUG] [org.gradle.logging.internal.DefaultLoggingConfigurer] Finished configuring with level: DEBUG, configurers: [org.gradle.logging.internal.OutputEventRenderer@40213e13, org.gradle.logging.internal.logback.LogbackLoggingConfigurer@46727249, org.gradle.logging.internal.JavaUtilLoggingConfigurer@3ad3ac1]

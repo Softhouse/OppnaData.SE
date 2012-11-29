@@ -1,3 +1,7 @@
+<?php
+    // require("block.tpl.php");
+?>
+
 <!DOCTYPE html>
 <html lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 <head>
@@ -12,6 +16,8 @@
 
 
 <body class="<?php print $body_classes; ?>">
+
+
     <div id="header-container">
         <header>
             <div id="logo">
@@ -38,6 +44,7 @@
                 <?php if (!empty($search_box)): ?>
 
                     <div id="search-box">
+
                         <?= $search_box; ?>
 
                     </div>
@@ -55,6 +62,7 @@
         <?= $nav; ?>
 
     </nav>
+    <div id="floatfix">&nbsp;</div>
 </div>
 
 
@@ -75,6 +83,7 @@
         <?php if (!empty($help)): print $help; endif; ?>
 
         <div id="content-content" class="clear-block">
+            
             <?= $content; ?>
 
         </div> <!-- /content-content -->
@@ -91,6 +100,8 @@
 
         </aside> <!-- /sidebar-right -->
     <?php endif; ?>
+
+    <div id="floatfix">&nbsp;</div>
 
 </div>
 
@@ -121,8 +132,17 @@
 
     </div>
 </footer>
+<div id="footerfix">&nbsp;</div>
 
-<?= $closure; ?>
+    <?= $closure; ?>
+
+
+    <?php
+        // print '<pre>';
+        // var_dump(get_defined_vars()); 
+        // print '</pre>';
+    ?>
+
 </body>
 
 
