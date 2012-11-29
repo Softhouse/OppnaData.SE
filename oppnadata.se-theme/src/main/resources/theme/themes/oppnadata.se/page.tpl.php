@@ -41,14 +41,8 @@
 
             <div id="header-right">
 
-                <?php if (!empty($search_box)): ?>
-
-                    <div id="search-box">
-
-                        <?= $search_box; ?>
-
-                    </div>
-                <?php endif; ?>
+                    
+                <?php print $header_right; ?>
 
             </div>
 

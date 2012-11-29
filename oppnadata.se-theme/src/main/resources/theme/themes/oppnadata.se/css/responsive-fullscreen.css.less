@@ -93,12 +93,15 @@
                 background-color: @white;
                 .boxSpacing();
                 .drop-shadow();
+                .border-radius();
+                border: 1px solid @borderColor;
 
                 margin-top: 2em;
                 margin-bottom: 1em;
 
                 h2 {
                     margin-bottom: 1em;
+                    .column(10);
                 }
 
                 .submitted {
@@ -111,16 +114,8 @@
                 }
 
                 h2 {
-                    .column(10);
+                    
                 }
-
-                // p {
-                //     margin-left: 1em;
-                // }
-
-                // .meta {
-                //     margin-left: 1em;
-                // }
             }
         }
 
