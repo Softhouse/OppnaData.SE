@@ -56,6 +56,11 @@ processResources << {
 		from zipTree(drupal.getResource("jquery_update-6.x-2.x-dev.zip"))
 		from zipTree(drupal.getResource("superfish-6.x-1.8.zip"))
 		from zipTree(drupal.getResource("admin_menu-6.x-1.8.zip"))
+// Needed by twitter start
+   	     	from tarTree(drupal.getResource("autoload-6.x-2.1.tar.gz"))
+		from tarTree(drupal.getResource("ctools-6.x-1.10.tar.gz"))
+		from tarTree(drupal.getResource("oauth-6.x-3.0-beta4.tar.gz"))
+// Needed by twitter end
 		into "$buildDir/resources/main/module/modules"
 	}
 	
