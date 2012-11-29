@@ -75,6 +75,12 @@ processResources << {
 		from zipTree(jquery.getResource("jquery.ui-1.6.zip"))
 		into "$buildDir/resources/main/module/sites/all/libraries"
 	}
+	
+	def tinymce = new ArtifactDownloader(file("$buildDir"), "http://github.com/downloads/tinymce/tinymce/")
+	//copy {
+	//	from zipTree(tinymce.getResource("tinymce_3.5.8.zip"))
+	//	into "$buildDir/resources/main/module/sites/all/libraries"
+	//}
 
 	def superfish = new ArtifactDownloader(file("$buildDir"), "https://github.com/mehrpadin/Superfish-for-Drupal/archive/")
 	copy {
