@@ -84,6 +84,10 @@
 
             background-color: @sectionBackgroundColor;
 
+            .table {
+                .colums(12);
+            }
+
             #page-title {
                 margin-left: 1em;
             }
@@ -111,16 +115,22 @@
                 }
 
                 #icon-container {
-                    .column(2);
+                    .column(1.5);
+                }                
+
+                .title {
+                    .column(10);
                 }
 
-                ul {
-                    text-align: right;
-                }
+                .taxonomy {
+                    .column(10);
+                    margin-top: 0.5em;
 
-                li {
-                   .applyLabel(); 
+                    li {
+                       .applyLabel(); 
+                    }
                 }
+                
             }
         }
 

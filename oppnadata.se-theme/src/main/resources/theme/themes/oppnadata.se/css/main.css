@@ -20,8 +20,7 @@ h1 {
 h2,
 h3,
 h4 {
-  font-family: "Gill Sans", "Calibri Light", sans-serif;
-  text-transform: uppercase;
+  font-family: Georgia, "Gill Sans", "Calibri Light", sans-serif;
   color: #446aa1;
   margin-bottom: right;
 }
@@ -228,13 +227,23 @@ aside ul.menu ul a {
   #content section #content-content .node #icon-container {
     display: inline;
     float: left;
-    width: 14.583333333333%;
+    width: 10.416666666667%;
     margin: 0 1.0416666666667%;
   }
-  #content section #content-content .node ul {
-    text-align: right;
+  #content section #content-content .node .title {
+    display: inline;
+    float: left;
+    width: 81.25%;
+    margin: 0 1.0416666666667%;
   }
-  #content section #content-content .node li {
+  #content section #content-content .node .taxonomy {
+    display: inline;
+    float: left;
+    width: 81.25%;
+    margin: 0 1.0416666666667%;
+    margin-top: 0.5em;
+  }
+  #content section #content-content .node .taxonomy li {
     background-color: #EBEBEB;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
