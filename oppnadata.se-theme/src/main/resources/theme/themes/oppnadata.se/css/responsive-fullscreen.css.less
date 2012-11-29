@@ -96,6 +96,8 @@
                 .border-radius();
                 border: 1px solid @borderColor;
 
+                background-color: @white;
+
                 margin-top: 2em;
                 margin-bottom: 1em;
 
@@ -113,8 +115,12 @@
                     .column(2);
                 }
 
-                h2 {
-                    
+                ul {
+                    text-align: right;
+                }
+
+                li {
+                   .applyLabel(); 
                 }
             }
         }
@@ -128,7 +134,8 @@
             h2 {
                 background-color: @blue2;
                 color: @white;
-                padding-top: 1em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
                 text-align: center;
                 margin-top: 0;
                 margin-left: 0;
@@ -156,6 +163,8 @@
         padding-top: 2em;
         padding-bottom: 2em;
 
+        border-top: 1px solid @borderColor;
+
         #footer-content {
             margin-left:auto;
             margin-right:auto;
@@ -171,6 +180,11 @@
                float:none; 
                clear: both;
             }
+
+            #bottomImg {
+                margin-top: 1em;
+            }
+
         }
     }
 
@@ -190,5 +204,7 @@
         position: fixed;
         background-color: @footerBackgroundColor;
     }
+
+
 
 }

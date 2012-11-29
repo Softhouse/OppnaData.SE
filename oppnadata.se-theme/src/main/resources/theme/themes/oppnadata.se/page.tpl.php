@@ -124,6 +124,8 @@
 
         </nav>
 
+        <img src="/sites/default/files/regering.png" alt="" id="bottomImg" />
+
     </div>
 </footer>
 <div id="footerfix">&nbsp;</div>
