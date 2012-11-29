@@ -91,7 +91,8 @@ function render_dataset($dataset) {
 	
 	$tags = '';
 	foreach ($dataset->tagArray() as $tag) {
-		$tags .= '<a href="/ckan_datasets/' . $tag . '">' . $tag . '</a><br/>';
+		// TODO: Url encode tags with swedish characters
+		$tags .= '<a href="/ckan_datasets/' . $tag . '">' . drupal_convert_to_utf8($tag, 'iso-8859-1') . '</a><br/>';
 	}
 	// $dataset->tags()->mkString('<br/>')
 	$rows[] = array('<b>Taggar</b>', $tags); 
