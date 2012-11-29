@@ -10,7 +10,14 @@ import com.caucho.quercus.module.AbstractQuercusModule;
 
 public class ServiceModule extends AbstractQuercusModule {
 
-	// TODO: Add commons logging here!!
+	// Use legacy merge sort, i.e. the implementation used before JDK7.
+	// Otherwise the PHP rendering will fail sometimes when using JDK7.
+	// See http://www.oracle.com/technetwork/java/javase/compatibility-417013.html for further details.
+	//
+	static {
+		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
+	}
+	
 	private BundleContext bundleContext = (BundleContext) GlobalReference.get("osgi/bundleContext");
 
 	public Object service_ref(Env env, String serviceName) {
