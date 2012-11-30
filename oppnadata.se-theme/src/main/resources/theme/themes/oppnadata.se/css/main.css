@@ -195,6 +195,9 @@ div.item-list ul li {
   section {
     background-color: #EBEBEB;
   }
+  section .table {
+    width: 100%;
+  }
   section #page-title {
     margin-left: 1em;
   }
