@@ -117,6 +117,9 @@ body > footer:after,
 #footer-container {
   margin: 0 auto;
 }
+#content {
+  padding-top: 1em;
+}
 #content .node h2,
 #content .node .taxonomy {
   margin: 0 0 0.5em 84px;
