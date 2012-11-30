@@ -10,9 +10,11 @@
   padding-left: 0;
 }
 .sf-menu.sf-style-none a {
-  border: 1px outset #000000;
-  color: #f1f1f1;
+  /*border: 1px outset #000000;*/
+  color: @gray1;
+  font-size: 95%;
   padding: 0.75em 1em;
+  text-transform: uppercase;
 }
 .sf-menu.sf-style-none a.sf-with-ul {
   padding-right: 2.25em;
@@ -36,7 +38,8 @@
 .sf-menu.sf-style-none li li,
 .sf-menu.sf-style-none li li li,
 .sf-menu.sf-style-none.sf-navbar {
-  background: #333333;
+  background: @headerBackgroundColor;
+  border-bottom: 3px solid @headerBackgroundColor;
 }
 .sf-menu.sf-style-none li:hover,
 .sf-menu.sf-style-none li.sfHover,
@@ -45,8 +48,8 @@
 .sf-menu.sf-style-none a:hover,
 .sf-menu.sf-style-none a:active,
 .sf-menu.sf-style-none.sf-navbar li li {
-  background: @menuBackgroundColor;
-  color: @menuColor;
+  color: #000;
+  border-bottom-color: @menuBackgroundColor;
 }
 .sf-menu.sf-style-none.sf-navbar li ul {
   background-color: @menuBackgroundColor;

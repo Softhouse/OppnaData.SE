@@ -6,13 +6,26 @@ body {
 }
 
 h1 {
+    font-size: 320%;
     font-family: @mainHeaderFont;
+    font-weight: @headerFontWeight;
+    .rotate(0.000001deg);
+}
+
+h2 {
+    font-size: 240%;
+    .rotate(0.000001deg);
 }
 
 h2,
 h3,
 h4 {
+    font-weight: @headerFontWeight;
     font-family: @subHeaderFont;
+}
+
+aside h2 {
+    font-size: 160%;
 }
 
 a {
@@ -34,6 +47,10 @@ h3 a,
 
 .taxonomy li {
     font-size: 80%;
+}
+
+#content .node .content {
+    line-height: 150%;
 }
 
 div.item-list ul li {

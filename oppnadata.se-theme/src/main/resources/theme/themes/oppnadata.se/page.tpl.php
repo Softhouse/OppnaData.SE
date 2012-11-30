@@ -6,6 +6,7 @@
 <html lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 <head>
     <meta charset="utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <?php print $head; ?>
     <title><?php print $head_title; ?></title>

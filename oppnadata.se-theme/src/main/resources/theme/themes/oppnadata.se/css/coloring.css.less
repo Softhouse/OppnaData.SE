@@ -46,16 +46,32 @@ a:hover {
     color: @blue2;
 }
 
-#main h2 a {
-    color: @purple1;
+#content .node {
+    background-color: @white;
+    border: 1px solid @borderColor;
+}
+
+ul.links.inline a {
+    color: @gray1;
+}
+ul.links.inline a:hover {
+    color: @blue3;
+}
+
+.taxonomy ul.links.inline li a {
+    background-color: @blue2;
+    .border-radius();
+    color: @white;
+    border: 1px solid @blue1;
+    padding: 2px 5px;
+}
+
+.taxonomy ul.links.inline li a:hover {
+    background-color: @blue1;
 }
 
 div.meta span.submitted {
     color: @gray2;
-}
-
-ul.links.inline a{
-    color: @gray1;
 }
 
 aside {
