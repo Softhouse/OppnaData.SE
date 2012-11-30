@@ -16,12 +16,16 @@ nav {
     background-color: @headerBackgroundColor;
 }
 
-#content {
+#main {
     background-color: @contentBackgroundColor;
 }
 
 section {
     background-color: @sectionBackgroundColor;
+}
+
+#main aside {
+    background-color: @sidebarRightBackgroundColor;
 }
 
 #breadcrumb {
@@ -30,6 +34,10 @@ section {
 
 h1 {
     color: @blue1;
+}
+
+body > header h1 {
+    color: @blue2;
 }
 
 h2,
@@ -49,6 +57,11 @@ a:hover {
 #content .node {
     background-color: @white;
     border: 1px solid @borderColor;
+}
+
+#main aside h2 {
+    background-color: @blue2;
+    color: @white;
 }
 
 ul.links.inline a {

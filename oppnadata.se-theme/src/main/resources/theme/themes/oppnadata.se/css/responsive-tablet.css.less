@@ -1,31 +1,24 @@
-
-
 @media all and (min-width: @BP1) and (max-width: @BP2) {
+
+    #content {
+        .column(9);
+    }
+
+    #main aside {
+        .column(3);
+    }
+
+    #main {
+        padding-bottom: 1em;
+    }
 
     #content .node .content {
         .clearfix;
         margin-left: 0;
     }
 
-    #logo {
-        display: block;
+    body > footer {
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
-    #logo-mobile {
-        display: none;
-    }
-
-
-    // menu - main - right
-    #sidebar-left {
-        .column(4);
-    }
-    #sidebar-right {
-        .column(8)
-    }
-    #main {
-        .column(8)
-    }
-
 }
-
-

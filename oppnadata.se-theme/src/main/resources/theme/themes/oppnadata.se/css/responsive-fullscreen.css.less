@@ -5,9 +5,9 @@
 @media all and (min-width: @BP2) {
 
     #header-container,
-    #content,
+    #main,
     #footer-container {
-        width: @mainContentWidth;
+        max-width: 1000px;
     }
 
     body > footer {
@@ -15,7 +15,7 @@
         padding-bottom: 2em;
     }
 
-    #content {
+    #main {
         padding-bottom: 2em;
     }
 
@@ -23,41 +23,16 @@
         margin-left: 84px;
     }
 
-
-    #logo {
-        .column(8);
-    }
-
-    #logo-mobile {
-        display: none;
-    }
-
     #header-right {
         .column(4);
         text-align: right;
     }
 
-    nav {
-        .column(12);
-        height: 46px;
+    section .table {
+        width: 100%;
     }
 
-    section {
-        .table {
-            width: 100%;
-        }
-
-        #page-title {
-            margin-left: 1em;
-        }
-    }
-
-    #breadcrumb {
-        .column(12);
-    }
-
-
-    #content-content {
+    #content {
         .column(9);
 
         .node {
@@ -72,13 +47,11 @@
         }
     }
 
-    aside#sidebar-right {
+    #main aside {
         .column(3);
         background-color: @sidebarRightBackgroundColor;
 
         h2 {
-            background-color: @blue2;
-            color: @white;
             padding-top: 0.5em;
             padding-bottom: 0.5em;
             text-align: center;
@@ -102,15 +75,6 @@
         .content {
             margin: 0 1em;
         }
-    }
-
-    #footer-container {
-        text-align: center;
-
-        #bottomImg {
-            margin-top: 1em;
-        }
-
     }
 
 }
