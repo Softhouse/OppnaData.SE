@@ -25,6 +25,7 @@
         
     }           
 
+
     #logo {
         .column(8);
     }
@@ -103,19 +104,24 @@
                 .column(1.5);
             }                
 
+            .submitted {
+                margin-left: 1em;
+                .column(10);
+            }
+
+            #icon-container {
+                .column(1.5);
+            }
+
             .title {
-                .column(10.5);
+                .column(10);
             }
 
             .taxonomy {
-                .column(10.5);
+                .column(10);
                 margin-top: 0.5em;
-                margin-bottom: 0.5em;
-
-                li {
-                   .applyLabel(); 
-                }
             }
+
         }
     }
 
@@ -132,6 +138,7 @@
             margin-top: 0;
             margin-left: 0;
         }
+
 
         .block {
             .box-sizing();
@@ -167,7 +174,7 @@
 
             li {
                display:block;
-               float:none; 
+               float:none;
                clear: both;
             }
 

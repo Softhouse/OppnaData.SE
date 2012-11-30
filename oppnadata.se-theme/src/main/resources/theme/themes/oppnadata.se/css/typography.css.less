@@ -2,67 +2,41 @@
 /* Typoghraphy */
 
 body {
-    font: (@fontSize/@lineHeight)*1px @bodyFont;
+    font: (@fontSize)*1px/@lineHeight @bodyFont;
 }
 
 h1 {
     font-family: @mainHeaderFont;
-    color: @blue1;
 }
 
 h2,
 h3,
 h4 {
     font-family: @subHeaderFont;
-    // text-transform: uppercase;
-    color: @blue2;
-    margin-bottom: right;
 }
 
 a {
-    color: @pink1;
-    text-decoration: none; 
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 a,
+h2 a,
+h3 a,
+.taxonomy li a {
+    text-decoration: none;
+}
+
+.taxonomy li {
+    font-size: 80%;
 }
 
 div.item-list ul li {
     list-style: none;
     list-style-type: none;
-}
-
-#name-and-slogan h1 a {
-    color: @blue1;
-    a:hover {
-        color:#0E0B06;
-        padding:1px 2px;
-        background:#70AFB4;
-        text-decoration: none; 
-        text-transform: uppercase;
-    }
-}
-
-#main section h2 a {
-    color: @purple1;
-}
-
-div.meta span.submitted {
-    color: @gray2;
-}
-
-ul.links.inline a{
-    color: @gray1;
-}
-
-
-aside {
-    // .push(2);
-    ul.menu {
-        a {
-            color: @pink1;    
-        }
-        ul a {
-            color: @gray1;
-        }
-    }
 }
 
 #user-login-form {
