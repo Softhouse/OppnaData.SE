@@ -41,7 +41,7 @@
 
             <div id="header-right">
 
-                    
+
                 <?php print $header_right; ?>
 
             </div>
@@ -77,7 +77,7 @@
         <?php if (!empty($help)): print $help; endif; ?>
 
         <div id="content-content" class="clear-block">
-            
+
             <?= $content; ?>
 
         </div> <!-- /content-content -->
@@ -128,14 +128,12 @@
 
     </div>
 </footer>
-<div id="footerfix">&nbsp;</div>
-
     <?= $closure; ?>
 
 
     <?php
         // print '<pre>';
-        // var_dump(get_defined_vars()); 
+        // var_dump(get_defined_vars());
         // print '</pre>';
     ?>
 

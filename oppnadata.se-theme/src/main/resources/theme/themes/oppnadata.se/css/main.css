@@ -49,6 +49,25 @@ aside ul.menu a {
 aside ul.menu ul a {
   color: #313230;
 }
+header,
+#content,
+footer {
+  *zoom: 1;
+}
+header:before,
+header:after,
+#content:before,
+#content:after,
+footer:before,
+footer:after {
+  content: "";
+  display: table;
+}
+header:after,
+#content:after,
+footer:after {
+  clear: both;
+}
 .taxonomy li a {
   background-color: #619dca;
   -webkit-border-radius: 5px;
@@ -312,9 +331,6 @@ div.item-list ul li {
     background-color: #FFFFFF;
   }
   footer {
-    display: block;
-    clear: both;
-    width: 100%;
     background-color: #FFFFFF;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -336,21 +352,6 @@ div.item-list ul li {
   }
   footer #footer-content #bottomImg {
     margin-top: 1em;
-  }
-  #floatfix {
-    float: none;
-    clear: both;
-    line-height: 1px;
-    height: 0;
-    visibility: hidden;
-  }
-  #footerfix {
-    float: none;
-    clear: both;
-    width: 100%;
-    height: 500px;
-    position: fixed;
-    background-color: #FFFFFF;
   }
 }
 .sf-menu.sf-style-none {
