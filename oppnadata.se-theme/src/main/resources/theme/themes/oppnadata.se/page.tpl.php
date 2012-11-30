@@ -20,7 +20,7 @@
 
     <header>
         <div id="header-container">
-            
+
             <div id="logo">
 
                 <?php if (!empty($logo)): ?>
@@ -45,20 +45,11 @@
 
             <div id="nav-container">
                 <nav id="nav">
-
                     <?= $nav; ?>
                 </nav>
-    
-                <div class="floatfix">&nbsp;</div>
             </div>
-
         </div>
-
     </header>
-
-
-
-
 
     <section>
         <div id="content">
@@ -68,7 +59,7 @@
             <?php if (!empty($mission)): ?><div id="mission"><?= $mission; ?></div><?php endif; ?>
 
 
-            <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?= $title; ?></h1><?php endif; ?>
+            <?php if (!empty($title)): ?><h1 id="page-title"><?= $title; ?></h1><?php endif; ?>
 
             <?php if (!empty($tabs)): ?><div class="tabs"><?= $tabs; ?></div><?php endif; ?>
 
@@ -77,55 +68,48 @@
             <?php if (!empty($help)): print $help; endif; ?>
 
             <div id="content-content" class="clear-block">
-                
+
                 <?= $content; ?>
 
-            </div> 
+            </div>
 
             <aside id="sidebar-right" class="column sidebar">
 
                 <?= $right; ?>
 
             </aside>
-
-            <div id="floatfix">&nbsp;</div>
-
         </div>
-
-            
     </section>
 
+    <footer>
+        <div id="footer-container">
+            <?= $footer_message; ?>
 
+            <?php if (!empty($footer)): print $footer; endif; ?>
 
-<footer>
-    <div id="footer-content">
-        <?= $footer_message; ?>
+            <nav class="<?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
+                <?php if (!empty($primary_links)): ?>
 
-        <?php if (!empty($footer)): print $footer; endif; ?>
+                <div id="primary" class="clear-block">
+                    <?= theme('links', $primary_links, array('class' => 'links primary-links')); ?>
 
-        <nav class="<?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
-            <?php if (!empty($primary_links)): ?>
+                </div>
+                <?php endif; ?>
 
-            <div id="primary" class="clear-block">
-                <?= theme('links', $primary_links, array('class' => 'links primary-links')); ?>
+                <?php if (!empty($secondary_links)): ?>
 
-            </div>
-            <?php endif; ?>
+                <div id="secondary" class="clear-block">
+                    <?= theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
 
-            <?php if (!empty($secondary_links)): ?>
+                </div>
+                <?php endif; ?>
 
-            <div id="secondary" class="clear-block">
-                <?= theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
+            </nav>
 
-            </div>
-            <?php endif; ?>
+            <img src="/sites/default/files/regering.png" alt="" id="bottomImg" />
 
-        </nav>
-
-        <img src="/sites/default/files/regering.png" alt="" id="bottomImg" />
-
-    </div>
-</footer>
+        </div>
+    </footer>
     <?= $closure; ?>
 
 

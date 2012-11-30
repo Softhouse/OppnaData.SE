@@ -1,7 +1,31 @@
-header,
+body > header,
+#header-container,
+#nav-container,
 #content,
-footer {
+#content .node .content,
+#content .node footer,
+body > footer,
+#footer-container,
+#footer-container li {
     .clearfix;
+}
+
+#header-container,
+#content,
+#footer-container {
+    margin: 0 auto;
+}
+
+#content .node h2,
+#content .node .taxonomy {
+    margin: 0 0 0.5em 84px;
+}
+
+#content .node .icon-container {
+    width: 64px;
+    height: 64px;
+    float: left;
+    padding: 10px;
 }
 
 .taxonomy li a {

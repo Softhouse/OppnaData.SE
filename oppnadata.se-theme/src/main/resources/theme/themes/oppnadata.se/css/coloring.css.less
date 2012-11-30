@@ -1,5 +1,31 @@
 body {
-    background: #fff;
+    background: @white;
+}
+
+body > header {
+    background: @white;
+    border-bottom: 1px solid @borderColor;
+}
+
+body > footer {
+    background: @footerBackgroundColor;
+    border-top: 1px solid @borderColor;
+}
+
+nav {
+    background-color: @headerBackgroundColor;
+}
+
+#content {
+    background-color: @contentBackgroundColor;
+}
+
+section {
+    background-color: @sectionBackgroundColor;
+}
+
+#breadcrumb {
+    background-color: @breadcrumbBackgroundColor;
 }
 
 h1 {
