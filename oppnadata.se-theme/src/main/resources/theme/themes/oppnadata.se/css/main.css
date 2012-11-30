@@ -211,9 +211,11 @@ div.item-list ul li {
     background-color: #FFFFFF;
     height: 46px;
   }
-
   section {
     background-color: #EBEBEB;
+  }
+  section .table {
+    width: 100%;
   }
   section #page-title {
     margin-left: 1em;

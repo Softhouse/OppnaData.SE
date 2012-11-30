@@ -82,11 +82,6 @@
 
             </div> 
 
-            <div id="feed-icons">
-                <?= $feed_icons; ?>
-            </div>
-
-
             <aside id="sidebar-right" class="column sidebar">
 
                 <?= $right; ?>
@@ -99,6 +94,7 @@
 
             
     </section>
+
 
 
 <footer>
