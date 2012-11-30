@@ -211,6 +211,7 @@ div.item-list ul li {
     background-color: #FFFFFF;
     height: 46px;
   }
+
   section {
     background-color: #EBEBEB;
   }
@@ -362,8 +363,6 @@ div.item-list ul li {
   footer #footer-content #bottomImg {
     margin-top: 1em;
   }
-<<<<<<< HEAD
-=======
   .floatfix {
     float: none;
     clear: both;

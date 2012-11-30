@@ -40,8 +40,6 @@
             </div>
 
             <div id="header-right">
-
-
                 <?php print $header_right; ?>
             </div>
 
@@ -82,9 +80,11 @@
                 
                 <?= $content; ?>
 
-        <div id="content-content" class="clear-block">
+            </div> 
 
-            <?= $content; ?>
+            <div id="feed-icons">
+                <?= $feed_icons; ?>
+            </div>
 
 
             <aside id="sidebar-right" class="column sidebar">
