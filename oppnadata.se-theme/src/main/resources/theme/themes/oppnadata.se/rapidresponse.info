@@ -8,6 +8,6 @@ stylesheets[all][] = css/main.css
 
 regions[right] = Right pane
 regions[content] = Content
-regions[header-right] = Header - right
+regions[header_right] = Header - right
 regions[footer] = Footer
 regions[nav] = Navigation

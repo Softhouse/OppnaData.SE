@@ -1,0 +1,87 @@
+body {
+    background: @white;
+}
+
+body > header {
+    background: @white;
+    border-bottom: 1px solid @borderColor;
+}
+
+body > footer {
+    background: @footerBackgroundColor;
+    border-top: 1px solid @borderColor;
+}
+
+nav {
+    background-color: @headerBackgroundColor;
+}
+
+#content {
+    background-color: @contentBackgroundColor;
+}
+
+section {
+    background-color: @sectionBackgroundColor;
+}
+
+#breadcrumb {
+    background-color: @breadcrumbBackgroundColor;
+}
+
+h1 {
+    color: @blue1;
+}
+
+h2,
+h3,
+h4 {
+    color: @blue2;
+}
+
+a {
+    color: @blue1;
+}
+
+a:hover {
+    color: @blue2;
+}
+
+#content .node {
+    background-color: @white;
+    border: 1px solid @borderColor;
+}
+
+ul.links.inline a {
+    color: @gray1;
+}
+ul.links.inline a:hover {
+    color: @blue3;
+}
+
+.taxonomy ul.links.inline li a {
+    background-color: @blue2;
+    .border-radius();
+    color: @white;
+    border: 1px solid @blue1;
+    padding: 2px 5px;
+}
+
+.taxonomy ul.links.inline li a:hover {
+    background-color: @blue1;
+}
+
+div.meta span.submitted {
+    color: @gray2;
+}
+
+aside {
+    // .push(2);
+    ul.menu {
+        a {
+            color: @pink1;
+        }
+        ul a {
+            color: @gray1;
+        }
+    }
+}
