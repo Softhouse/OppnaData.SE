@@ -49,9 +49,9 @@
     border-bottom-left-radius:          @bottomleft;
     border-top-left-radius:             @topleft;
 
-    -moz-background-clip:    padding; 
-    -webkit-background-clip: padding-box; 
-    background-clip:         padding-box; 
+    -moz-background-clip:    padding;
+    -webkit-background-clip: padding-box;
+    background-clip:         padding-box;
 }
 
 .opacity (@opacity: 0.5) {
@@ -84,12 +84,12 @@
 }
 
 .transition (@transition) {
-    -webkit-transition: @transition;  
+    -webkit-transition: @transition;
     -moz-transition:    @transition;
-    -ms-transition:     @transition; 
-    -o-transition:      @transition;  
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
 }
-.transform(@string){
+.transform (@string){
     -webkit-transform: @string;
     -moz-transform:      @string;
     -ms-transform:       @string;
@@ -136,4 +136,14 @@
     -moz-transform-origin:    @x @y;
     -ms-transform-origin:     @x @y;
     -o-transform-origin:      @x @y;
+}
+
+
+// MIXINS WITH COLORS:
+
+.applyLabel () {
+    background-color: @blue1;
+    .border-radius();
+    border: 1px solid @blue2;
+    padding: 2px 5px;
 }

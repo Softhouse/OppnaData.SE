@@ -1,3 +1,10 @@
+* {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
 body {
   width: 100%;
   *zoom: 1;
@@ -11,38 +18,23 @@ body:after {
   clear: both;
 }
 body {
-  font: 12.307692307692px Verdana "Helvetica Neue" Calibri sans-serif;
+  background: #fff;
 }
 h1 {
-  font-family: Verdana "Helvetica Neue" Calibri sans-serif;
   color: #619dca;
 }
 h2,
 h3,
 h4 {
-  font-family: Georgia, "Gill Sans", "Calibri Light", sans-serif;
   color: #446aa1;
-  margin-bottom: right;
 }
 a {
-  color: #b85b69;
-  text-decoration: none;
-}
-div.item-list ul li {
-  list-style: none;
-  list-style-type: none;
-}
-#name-and-slogan h1 a {
   color: #619dca;
 }
-#name-and-slogan h1 a a:hover {
-  color: #0E0B06;
-  padding: 1px 2px;
-  background: #70AFB4;
-  text-decoration: none;
-  text-transform: uppercase;
+a:hover {
+  color: #446aa1;
 }
-#main section h2 a {
+#main h2 a {
   color: #4d3075;
 }
 div.meta span.submitted {
@@ -56,6 +48,47 @@ aside ul.menu a {
 }
 aside ul.menu ul a {
   color: #313230;
+}
+.taxonomy li a {
+  background-color: #619dca;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #446aa1;
+  padding: 2px 5px;
+}
+body {
+  font: 16px/1.3 Verdana "Helvetica Neue" Calibri sans-serif;
+}
+h1 {
+  font-family: Verdana "Helvetica Neue" Calibri sans-serif;
+}
+h2,
+h3,
+h4 {
+  font-family: Georgia, "Gill Sans", "Calibri Light", sans-serif;
+}
+a {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 a,
+h2 a,
+h3 a,
+.taxonomy li a {
+  text-decoration: none;
+}
+.taxonomy li {
+  font-size: 80%;
+}
+div.item-list ul li {
+  list-style: none;
+  list-style-type: none;
 }
 @media all and (max-width: 570px) {
   #logo {
@@ -242,16 +275,6 @@ aside ul.menu ul a {
     width: 81.25%;
     margin: 0 1.0416666666667%;
     margin-top: 0.5em;
-  }
-  #content section #content-content .node .taxonomy li {
-    background-color: #EBEBEB;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #B3B3B3;
   }
   #content aside#sidebar-right {
     display: inline;
