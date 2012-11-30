@@ -18,8 +18,9 @@
 <body class="<?php print $body_classes; ?>">
 
 
-    <div id="header-container">
-        <header>
+    <header>
+        <div id="header-container">
+            
             <div id="logo">
 
                 <?php if (!empty($logo)): ?>
@@ -38,66 +39,67 @@
                 <?php endif; ?>
             </div>
 
-
             <div id="header-right">
 
 
                 <?php print $header_right; ?>
-
             </div>
 
-        </header>
-    </div>
+            <div id="nav-container">
+                <nav id="nav">
+
+                    <?= $nav; ?>
+                </nav>
+    
+                <div class="floatfix">&nbsp;</div>
+            </div>
+
+        </div>
+
+    </header>
 
 
-<div id="nav-container">
-    <nav id="nav">
 
-        <?= $nav; ?>
-
-    </nav>
-    <div id="floatfix">&nbsp;</div>
-</div>
-
-
-<div id="content">
-
-    <?php if (!empty($breadcrumb)): ?><div id="breadcrumb"><?= $breadcrumb; ?></div><?php endif; ?>
-
-    <?php if (!empty($mission)): ?><div id="mission"><?= $mission; ?></div><?php endif; ?>
 
 
     <section>
-        <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?= $title; ?></h1><?php endif; ?>
+        <div id="content">
 
-        <?php if (!empty($tabs)): ?><div class="tabs"><?= $tabs; ?></div><?php endif; ?>
+            <?php if (!empty($breadcrumb)): ?><div id="breadcrumb"><?= $breadcrumb; ?></div><?php endif; ?>
 
-        <?php if (!empty($messages)): print $messages; endif; ?>
+            <?php if (!empty($mission)): ?><div id="mission"><?= $mission; ?></div><?php endif; ?>
 
-        <?php if (!empty($help)): print $help; endif; ?>
+
+            <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?= $title; ?></h1><?php endif; ?>
+
+            <?php if (!empty($tabs)): ?><div class="tabs"><?= $tabs; ?></div><?php endif; ?>
+
+            <?php if (!empty($messages)): print $messages; endif; ?>
+
+            <?php if (!empty($help)): print $help; endif; ?>
+
+            <div id="content-content" class="clear-block">
+                
+                <?= $content; ?>
 
         <div id="content-content" class="clear-block">
 
             <?= $content; ?>
 
-        </div> <!-- /content-content -->
-        <?= $feed_icons; ?>
 
+            <aside id="sidebar-right" class="column sidebar">
+
+                <?= $right; ?>
+
+            </aside>
+
+            <div id="floatfix">&nbsp;</div>
+
+        </div>
+
+            
     </section>
 
-
-    <?php if (!empty($right)): ?>
-
-        <aside id="sidebar-right" class="column sidebar">
-
-            <?= $right; ?>
-
-        </aside> <!-- /sidebar-right -->
-    <?php endif; ?>
-
-    <div id="floatfix">&nbsp;</div>
-
-</div>
 
 <footer>
     <div id="footer-content">
