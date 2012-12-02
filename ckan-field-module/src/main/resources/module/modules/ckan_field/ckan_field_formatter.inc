@@ -67,25 +67,25 @@ function render_dataset($dataset) {
 	
 	foreach ($dataset->resourceArray() as $resource) {
 		// TODO: Fallback if no description attached
-		$url = '<a href="' . $resource->url() . '">' . drupal_convert_to_utf8($resource->description(), 'iso-8859-1') . '</a>';
+		$url = '<a href="' . $resource->url() . '">' . drupal_convert_to_utf8($resource->description(), 'iso-8859-1') . '</a>&nbsp;';
 		$rows[] = array($url, $resource->format());
 	}
 	$output .= theme('ckan_field_container', $headers, $rows, 'Resurser');
 	
 	// Information table
 	//
-	$rows = array( array('<b>Titel</b>', drupal_convert_to_utf8($dataset->title(), 'iso-8859-1')),
-			array('<b>Utgivare</b>', $dataset->author()),
-			array('<b>Beskrivning</b>', drupal_convert_to_utf8($dataset->notes_rendered(), 'iso-8859-1')),
-			//array('<b>Version</b>', $dataset->version()),
-			array('<b>Skapad</b>', $dataset->metadata_created_date()),
-			array('<b>Uppdaterad</b>', $dataset->metadata_modified_date()),
-			array('<b>Licens</b>', $dataset->license()));
+	$rows = array( array('<b>Titel</b>&nbsp;', drupal_convert_to_utf8($dataset->title(), 'iso-8859-1')),
+			array('<b>Utgivare</b>&nbsp;', $dataset->author()),
+			array('<b>Beskrivning</b>&nbsp;', drupal_convert_to_utf8($dataset->notes_rendered(), 'iso-8859-1')),
+			//array('<b>Version</b>&nbsp;', $dataset->version()),
+			array('<b>Skapad</b>&nbsp;', $dataset->metadata_created_date()),
+			array('<b>Uppdaterad</b>&nbsp;', $dataset->metadata_modified_date()),
+			array('<b>Licens</b>&nbsp;', $dataset->license()));
 	$extras = $dataset->extrasMap();
 	foreach ($extras->keySet() as $extras_key) {
 		$extras_value = $extras->get($extras_key);
 		if (!empty($extras_value)) {
-			$rows[] = array('<b>' . $extras_key . '</b>', drupal_convert_to_utf8($extras_value, 'iso-8859-1'));
+			$rows[] = array('<b>' . $extras_key . '</b>&nbsp;', drupal_convert_to_utf8($extras_value, 'iso-8859-1'));
 		}
 	}
 	
