@@ -44,7 +44,10 @@ section {
   background-color: #EBEBEB;
 }
 h1 {
-  color: #619dca;
+  color: #446aa1;
+}
+section h1 a {
+  color: #446aa1;
 }
 body > header h1 {
   color: #446aa1;
@@ -52,7 +55,7 @@ body > header h1 {
 h2,
 h3,
 h4 {
-  color: #446aa1;
+  color: #2f3674;
 }
 a {
   color: #619dca;
@@ -159,6 +162,9 @@ body > footer:after,
 #content .node + .node {
   margin-top: 2em;
 }
+section h1 {
+  margin-left: 20px;
+}
 #content .node h2,
 #content .node .taxonomy {
   margin: 0 0 0.5em 84px;
@@ -197,6 +203,9 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+h1 a:hover {
+  text-decoration: none;
 }
 header nav a,
 header nav a:hover,
