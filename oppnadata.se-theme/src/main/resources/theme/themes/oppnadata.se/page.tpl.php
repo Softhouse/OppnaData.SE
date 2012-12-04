@@ -21,8 +21,9 @@
 
         <header>
             <div id="header-container">
+                
                 <h1>&Ouml;ppnadata</h1>
-
+               
                 <div id="header-right">
                     <?php print $header_right; ?>
                 </div>

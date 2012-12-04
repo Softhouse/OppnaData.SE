@@ -33,6 +33,6 @@
  */
 ?>
 <div id="search" class="container-inline">
-    Pelle
-    <?php print str_replace('Search this site:','',$search_form);?>
+    <?php print $search_form;?>
 </div>
+
