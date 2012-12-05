@@ -13,6 +13,7 @@ function rapidresponse_preprocess_node(&$vars) {
     $vars['nodeImages'] = array(
         'blog' => 'Comments.png',
         'ckan_dataset' => 'File_PowerPoint.png',
+        'webform' => 'Mail_compose.png',
         'page' => 'News.png'
     );
 
