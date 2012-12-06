@@ -63,7 +63,9 @@ processResources << {
    	    from tarTree(drupal.getResource("autoload-6.x-2.1.tar.gz"))
 		from tarTree(drupal.getResource("ctools-6.x-1.10.tar.gz"))
 		from tarTree(drupal.getResource("oauth-6.x-3.0-beta4.tar.gz"))
+		from tarTree(drupal.getResource("twitter_profile_widget-6.x-1.6.tar.gz"))
 		// Needed by twitter end
+		from tarTree(drupal.getResource("i18n-6.x-1.10.tar.gz")) 
 		into "$buildDir/resources/main/module/modules"
 	}
 	
