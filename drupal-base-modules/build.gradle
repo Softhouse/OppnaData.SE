@@ -9,7 +9,7 @@ dependencies {
 processResources << {
  
 	// TODO: Insert all modules under modules or sites/all/modules ???
-	// TODO: Include tinymce library
+	// TODO: Include ckeditor library + module
 	// TODO: Download to an artifact directory instead so they are not needed to be re-downloaded to able to repackage the bundle
 	
 	// Module som saknas: OATH,CTOOLS, Context 
