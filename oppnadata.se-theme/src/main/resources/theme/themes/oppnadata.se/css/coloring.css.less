@@ -1,5 +1,5 @@
 body {
-    background: @white;
+    background: @bodyBackgroundColor;
 }
 
 body > header {
@@ -8,6 +8,11 @@ body > header {
 }
 
 body > footer {
+    background-color: @footerBackgroundColor;
+}
+
+
+#footer-container {
     background: @footerBackgroundColor;
     border-top: 1px solid @borderColor;
 }
@@ -40,7 +45,7 @@ section h1 a {
 }
 
 body > header h1 {
-    color: @blue2;
+    color: @darkGray;
 }
 
 h2,

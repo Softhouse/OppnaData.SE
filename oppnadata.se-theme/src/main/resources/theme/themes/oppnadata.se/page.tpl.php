@@ -22,8 +22,10 @@
         <header>
             <div id="header-container">
 
+                <img class="logo" src="/sites/default/files/wireframe.png" />
+              
                 <h1><a href="/">&Ouml;ppnadata</a></h1>
-                               
+
                 <div id="header-right">
                     <?php print $header_right; ?>
                 </div>
