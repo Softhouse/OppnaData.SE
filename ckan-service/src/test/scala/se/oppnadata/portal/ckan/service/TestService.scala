@@ -1,5 +1,7 @@
 package se.oppnadata.portal.ckan.service
 import se.oppnadata.portal.ckan.api.Dataset
+import dispatch.StatusCode
+import se.oppnadata.portal.ckan.api.CKANException
 
 // TODO: Make this a unit test class instead! Use Spec?
 
@@ -52,5 +54,16 @@ object TestService extends App {
   
   var datasetIds = ckanService.searchDatasetIdsByTag("social")
   println("Dataset IDs: " + datasetIds)
+  
+  println("Doing the search again - cached")
+  datasetIds = ckanService.searchDatasetIdsByTag("social")
+  println("Dataset IDs: " + datasetIds)
+  
+  try {
+  var id = ckanService.getDataset("notExistingDataset")
+  }
+  catch {
+    case e : CKANException => println("Error: " + e)
+  }
   
 }

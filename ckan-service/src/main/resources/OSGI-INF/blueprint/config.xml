@@ -11,6 +11,7 @@
         </service-properties>
         <bean class="se.oppnadata.portal.ckan.service.CKANServiceBean">
         	<property name="ckanCatalogHost" value="${ckanCatalogHost}"></property>
+        	<property name="ckanCatalogCacheExpiryTime" value="${ckanCatalogCacheExpiryTime}"></property>
         </bean>
     </service>
 </blueprint>

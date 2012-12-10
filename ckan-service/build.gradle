@@ -19,6 +19,9 @@ dependencies {
 	
 	// SJSON
 	compile sjson
+	
+	// SimpleCache
+	compile simpleCache
 }
 
 
@@ -30,6 +33,10 @@ processResources << {
 		include 'http**'
 		include 'sjson**'
 		include 'joda**'
+		include 'simplecache-core**'
+		include 'log4j**'
+		include 'google-collections**'
+		include 'option-**'
 	}
 }
 

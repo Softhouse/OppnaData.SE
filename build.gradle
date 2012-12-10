@@ -38,6 +38,7 @@ subprojects {
 		mavenRepo(url: 'http://repository.springsource.com/maven/bundles/external')
 		mavenRepo(url: 'http://caucho.com/m2')
 		mavenRepo(url: 'http://softhouse.github.com/TDR-Repo/repository/releases')
+		mavenRepo(url: 'http://guardian.github.com/maven/repo-releases')
 	}
 	
 	dependencies {
