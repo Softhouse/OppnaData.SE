@@ -72,7 +72,7 @@
 
             <div class="info">
                 <h3>Denna webbplats</h3>            
-                <p>Webbplatesen ing&aring;r en satsning f&ouml;r sveriges framtid.&nbsp;<a href="/node/5">Om webbplatsen</a></p>
+                <p>Webbplatesen ing&aring;r en satsning f&ouml;r sveriges framtid.&nbsp;<a href="/node/7">Om webbplatsen</a></p>
             </div>
 
             <div class="contact">
