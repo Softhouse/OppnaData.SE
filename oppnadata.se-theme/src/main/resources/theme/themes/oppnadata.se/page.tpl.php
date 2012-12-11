@@ -72,21 +72,22 @@
 
             <div class="info">
                 <h3>Denna webbplats</h3>            
-                <p><a href="/om-webbplatsen/">Om webbplatsen</a></p>
+                <p>Webbplatesen ingår en satsning för sveriges framtid.&nbsp;<a href="/node/5">Om webbplatsen</a></p>
             </div>
 
             <div class="contact">
                 <h3>Kontakt</h3>        
                 <ul>
                     <li><a href="mailto:info@webbriktlinjer.se" class="icon icon-mail">info@webbriktlinjer.se</a></li>
+                    <li>Ring oss på +46 (0)70 - 555 55 55</li>
                 </ul>
             </div>   
             <div class="syndication">
                 <h3>Följ oss</h3>
                 <ul>
-                    <li><a class="icon-fb" href="http://www.facebook.com/groups/oppendata/"><img src="/sites/default/files/icons/facebook.png" />Facebook</a></li>
-                    <li><a class="icon-twitter" href="https://twitter.com/#!/oppendata"><img src="/sites/default/files/icons/twitter.png" />Twitter</a></li>
-                    <li><a class="icon-rss" href="/nyheter/feed/"><img src="/sites/default/files/icons/rss.png" />RSS</a></li>
+                    <li><a class="icon-fb" href="http://www.facebook.com/groups/oppendata/"><img src="/sites/default/files/icons/Facebook.png" />Facebook</a></li>
+                    <li><a class="icon-twitter" href="https://twitter.com/#!/oppendata"><img src="/sites/default/files/icons/Twitter.png" />Twitter</a></li>
+                    <li><a class="icon-rss" href="/nyheter/feed/"><img src="/sites/default/files/icons/RSS.png" />RSS</a></li>
                 </ul>
             </div>                
 

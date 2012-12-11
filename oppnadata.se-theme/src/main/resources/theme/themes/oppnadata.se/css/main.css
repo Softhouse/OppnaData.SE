@@ -56,7 +56,7 @@ body header h1 a {
   color: #383838;
 }
 body header h1 a:hover {
-  color: #F6F6F6;
+  color: #383838;
 }
 h2,
 h3,
@@ -166,20 +166,26 @@ body > footer li:after {
 section h1 {
   margin-left: 20px;
 }
-body footer .info,
-body footer .contact,
-body footer .syndication {
+#main > footer {
+  display: inline;
+  float: left;
+  width: 97.916666666667%;
+  margin: 0 1.0416666666667%;
+}
+#main > footer .info,
+#main > footer .contact,
+#main > footer .syndication {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666667%;
 }
-body footer ul {
+#main > footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-body footer li {
+#main > footer li {
   margin-bottom: 10px;
 }
 body {
