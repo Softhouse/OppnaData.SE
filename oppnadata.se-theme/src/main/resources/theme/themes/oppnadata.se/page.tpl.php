@@ -72,7 +72,7 @@
 
             <div class="info">
                 <h3>Denna webbplats</h3>            
-                <p>Webbplatesen ingår en satsning för sveriges framtid.&nbsp;<a href="/node/5">Om webbplatsen</a></p>
+                <p>Webbplatesen ing&aring;r en satsning f&ouml;r sveriges framtid.&nbsp;<a href="/node/5">Om webbplatsen</a></p>
             </div>
 
             <div class="contact">
@@ -83,7 +83,7 @@
                 </ul>
             </div>   
             <div class="syndication">
-                <h3>Följ oss</h3>
+                <h3>F&ouml;lj oss</h3>
                 <ul>
                     <li><a class="icon-fb" href="http://www.facebook.com/groups/oppendata/"><img src="/sites/default/files/icons/Facebook.png" />Facebook</a></li>
                     <li><a class="icon-twitter" href="https://twitter.com/#!/oppendata"><img src="/sites/default/files/icons/Twitter.png" />Twitter</a></li>
