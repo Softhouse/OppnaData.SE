@@ -18,10 +18,9 @@
 
     <body class="<?php print $body_classes; ?>">
 
-
-        <header>
-            <div id="header-container">
-
+        <div id="main">
+            <header>
+                
                 <img class="logo" src="/sites/default/files/wireframe.png" />
               
                 <h1><a href="/">&Ouml;ppnadata</a></h1>
@@ -35,65 +34,70 @@
                         <?= $nav; ?>
                     </nav>
                 </div>
-            </div>
-        </header>
+
+            </header>
 
         <section>
-            <div id="main">
-                <?php if (!empty($breadcrumb)): ?><div id="breadcrumbs"><?= $breadcrumb; ?></div><?php endif; ?>
+            <?php if (!empty($breadcrumb)): ?><div id="breadcrumbs"><?= $breadcrumb; ?></div><?php endif; ?>
 
-                <?php if (!empty($mission)): ?><div id="mission"><?= $mission; ?></div><?php endif; ?>
+            <?php if (!empty($mission)): ?><div id="mission"><?= $mission; ?></div><?php endif; ?>
 
-                <?php if (!empty($title)): ?><h1 id="page-title"><?= $title; ?></h1><?php endif; ?>
+            <?php if (!empty($title)): ?><h1 id="page-title"><?= $title; ?></h1><?php endif; ?>
 
-                <?php if (!empty($tabs)): ?><div class="tabs"><?= $tabs; ?></div><?php endif; ?>
+            <?php if (!empty($tabs)): ?><div class="tabs"><?= $tabs; ?></div><?php endif; ?>
 
-                <?php if (!empty($messages)): print $messages; endif; ?>
+            <?php if (!empty($messages)): print $messages; endif; ?>
 
-                <?php if (!empty($help)): print $help; endif; ?>
+            <?php if (!empty($help)): print $help; endif; ?>
 
-                <div id="content">
+            <div id="content">
 
-                    <?= $content; ?>
+                <?= $content; ?>
 
-                </div>
-
-                <aside>
-
-                    <?= $right; ?>
-
-                </aside>
             </div>
+
+            <aside>
+
+                <?= $right; ?>
+
+            </aside>
+
+            <div id="floatfix">
+                &nbsp;
+            </div>
+
         </section>
 
         <footer>
-            <div id="footer-container">
-                <?= $footer_message; ?>
 
-                <?php if (!empty($footer)): print $footer; endif; ?>
+            <?= $footer_message; ?>
 
-                <nav class="<?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
-                    <?php if (!empty($primary_links)): ?>
+            <?php if (!empty($footer)): print $footer; endif; ?>
 
-                    <div id="primary" class="clear-block">
-                        <?= theme('links', $primary_links, array('class' => 'links primary-links')); ?>
-
-                    </div>
-                    <?php endif; ?>
-
-                    <?php if (!empty($secondary_links)): ?>
-
-                    <div id="secondary" class="clear-block">
-                        <?= theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
-
-                    </div>
-                    <?php endif; ?>
-
-                </nav>
+            <div class="info">
+                <h3>Denna webbplats</h3>            
+                <p><a href="/om-webbplatsen/">Om webbplatsen</a></p>
             </div>
-        </footer>
-        <?= $closure; ?>
 
+            <div class="contact">
+                <h3>Kontakt</h3>        
+                <ul>
+                    <li><a href="mailto:info@webbriktlinjer.se" class="icon icon-mail">info@webbriktlinjer.se</a></li>
+                </ul>
+            </div>   
+            <div class="syndication">
+                <h3>Följ oss</h3>
+                <ul>
+                    <li><a class="icon-fb" href="http://www.facebook.com/groups/oppendata/"><img src="/sites/default/files/icons/facebook.png" />Facebook</a></li>
+                    <li><a class="icon-twitter" href="https://twitter.com/#!/oppendata"><img src="/sites/default/files/icons/twitter.png" />Twitter</a></li>
+                    <li><a class="icon-rss" href="/nyheter/feed/"><img src="/sites/default/files/icons/rss.png" />RSS</a></li>
+                </ul>
+            </div>                
+
+        </footer>
+
+
+        <?= $closure; ?>
 
         <?php
             // print '<pre>';

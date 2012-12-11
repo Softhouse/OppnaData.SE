@@ -3,18 +3,13 @@ body {
 }
 
 body > header {
-    background: @white;
+    background: @headerBackgroundColor;
     border-bottom: 1px solid @borderColor;
 }
 
 body > footer {
     background-color: @footerBackgroundColor;
-}
-
-
-#footer-container {
-    background: @footerBackgroundColor;
-    border-top: 1px solid @borderColor;
+    border-top: 4px solid @borderColor;
 }
 
 nav {
@@ -25,27 +20,35 @@ nav {
     background-color: @contentBackgroundColor;
 }
 
-section {
-    background-color: @sectionBackgroundColor;
-}
-
 #main aside {
     background-color: @sidebarRightBackgroundColor;
+    .block {
+        background-color: @sidebarRightBackgroundColor;
+        .head {
+            border-bottom: 6px solid @headBorderColor;
+        }
+    }
 }
+
 
 #breadcrumb {
     background-color: @breadcrumbBackgroundColor;
 }
 
 h1 {
-    color: @blue2;
+    color: @h1Color;
 }
 section h1 a {
-    color: @blue2;
+    color: @h1AColor;
 }
 
-body > header h1 {
-    color: @darkGray;
+body header h1 {
+    a {
+        color: @headerH1Color;
+    }
+    a:hover {
+        color: @headerH1AColor;
+    }
 }
 
 h2,
@@ -63,13 +66,14 @@ a:hover {
 }
 
 #content .node {
-    background-color: @white;
-    border: 1px solid @borderColor;
+    background-color: @lightGray;
+    footer {
+        background-color: @contentFooterBGC;
+    }
 }
 
 #main aside h2 {
-    background-color: @blue2;
-    color: @white;
+    color: @blue2;
 }
 
 ul.links.inline a {
@@ -96,7 +100,6 @@ div.meta span.submitted {
 }
 
 aside {
-    // .push(2);
     ul.menu {
         a {
             color: @pink1;
@@ -105,4 +108,8 @@ aside {
             color: @gray1;
         }
     }
+}
+
+#main > footer {
+    border-top: 6px solid @footerBorderColor;
 }

@@ -4,28 +4,23 @@
 
 @media all and (min-width: @BP2) {
 
-    #header-container,
-    #main,
-    #footer-container {
+
+    #main {
+        margin-right: auto;
+        margin-left: auto;
         max-width: 1000px;
     }
 
-    body > footer {
-        padding-top: 2em;
+    #main > footer {
+        margin-top: 2em;
+        padding-top: 1em;
         padding-bottom: 2em;
-    }
-
-    #main {
-        padding-bottom: 2em;
-    }
-
-    #content .node .content {
-        margin-left: 84px;
     }
 
     header .logo {
         float: left;
-        margin-top: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;   
     }
 
     #header-right{
@@ -38,12 +33,26 @@
     }
 
     #content {
-        .column(9);
+        .column(8);
+
+        h2 {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: 0;
+        }
 
         .node {
-            .boxSpacing();
             .drop-shadow();
             .border-radius();
+
+            header {
+                .boxSpacing();
+                padding-bottom: 0; 
+            }
+
+            section, footer {
+                .boxSpacing();
+            }
 
             .submitted {
                 margin-left: 1em;
@@ -53,32 +62,25 @@
     }
 
     #main aside {
-        .column(3);
+        .column(4);
         background-color: @sidebarRightBackgroundColor;
 
         h2 {
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
-            text-align: center;
-            margin-top: 0;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
             margin-left: 0;
         }
 
 
         .block {
             .box-sizing();
-            .border-radius();
-            .drop-shadow();
             padding-bottom: 1em;
-            border: 1px solid @borderColor;
             margin-bottom: 1em;
             margin-top: 1em;
-
-            background-color: @white;
         }
 
         .content {
-            margin: 0 1em;
+            margin: 0 0;
         }
     }
 
