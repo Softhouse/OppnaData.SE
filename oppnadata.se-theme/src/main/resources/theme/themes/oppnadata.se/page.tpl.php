@@ -17,7 +17,7 @@
         <div id="main">
             <header>
                 
-                <img class="logo" src="/sites/default/files/wireframe.png" />
+                <a href="/"><img class="logo" src="/sites/default/files/wireframe.png" /></a>
               
                 <h1><a href="/">&Ouml;ppnadata</a></h1>
 
@@ -79,7 +79,7 @@
                 <h3>Kontakt</h3>        
                 <ul>
                     <li><a href="mailto:info@webbriktlinjer.se" class="icon icon-mail">info@webbriktlinjer.se</a></li>
-                    <li>Ring oss på +46 (0)70 - 555 55 55</li>
+                    <li>Ring oss p&aring; +46 (0)70 - 555 55 55</li>
                 </ul>
             </div>   
             <div class="syndication">
