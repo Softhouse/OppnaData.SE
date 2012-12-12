@@ -79,7 +79,7 @@
                 <h3>Kontakt</h3>        
                 <ul>
                     <li><a href="mailto:info@oppnadata.se" class="icon icon-mail">info@oppnadata.se</a></li>
-                    <li>Ring oss p&aring; +46 (0)8-473 30 00</li>
+                    <li>+46 (0)8-473 30 00 (V&auml;xel)</li>
                 </ul>
             </div>   
             <div class="social">
