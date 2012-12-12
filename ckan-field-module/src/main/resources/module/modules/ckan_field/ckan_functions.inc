@@ -13,3 +13,26 @@ function getDatasetsByCkanTag($ckan_tag) {
 	}
 	return $nodeids;
 }
+
+function searchNodesByMultipleTaxonomies($taxonomy_cond) {
+	
+	$nodeids = array();
+	$tok = strtok($taxonomy_cond, "-");
+	$sql = "SELECT nid from node WHERE ";
+	$firstCond = true;
+	while ( $tok !== false ) {
+		if ( ! $firstCond ) {
+			$sql .= " AND ";
+		}
+		$sql .= "nid IN (SELECT nid from term_node WHERE tid = $tok)";
+		if ( $firstCond ) {
+			$firstCond = false;
+		}
+		$tok = strtok("-");
+	}
+	$result = db_query($sql);
+	while ($row = db_fetch_array($result))  {
+		$nodeids[] = $row['nid'];
+	}
+	return $nodeids;
+}
