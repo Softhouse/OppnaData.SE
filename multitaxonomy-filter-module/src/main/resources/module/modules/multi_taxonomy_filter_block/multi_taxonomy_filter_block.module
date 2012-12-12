@@ -3,6 +3,8 @@
 //----------------------------------------------------------------------------
 // Drupal core hooks.
 
+// TODO: Keep the selected state between each search. Make a auto submit?
+
 /**
  * Implementation of hook_block().
  */
@@ -61,6 +63,8 @@ function multi_taxonomy_filter_block_form($form_state) {
       'dropbox' => array(
         // Only allow for a single term or single lineage to be selected.
         'status' => 1,
+        'title'  => t('Valda kategorier'),
+        'reset_hs' => 0
       ),
       'editability' => array(
         // Creating new terms from within a form to filter by existing terms
@@ -102,13 +106,6 @@ function multi_taxonomy_filter_block_form_submit($form_id, &$form_state) {
    // $terms[] = $term->name;
    $terms_arg_string = $value;
   }
-
-  // Maybe you want to display a message?
-  //$output = t('The following term(s) have been selected: !terms.', array('!terms' => implode(', ', $terms)));
-  //drupal_set_message($output);
-
-  // Or redirect the user?
-  //$tid = (is_array($value)) ? reset($value) : $value; // If multiple values are selected, use the first.
-  
+ 
   drupal_goto("term_add/$terms_arg_string");
 }
