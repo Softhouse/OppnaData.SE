@@ -78,16 +78,15 @@
             <div class="contact">
                 <h3>Kontakt</h3>        
                 <ul>
-                    <li><a href="mailto:info@webbriktlinjer.se" class="icon icon-mail">info@webbriktlinjer.se</a></li>
-                    <li>Ring oss p&aring; +46 (0)70 - 555 55 55</li>
+                    <li><a href="mailto:info@oppnadata.se" class="icon icon-mail">info@oppnadata.se</a></li>
+                    <li>Ring oss p&aring; +46 (0)8-473 30 00</li>
                 </ul>
             </div>   
-            <div class="syndication">
+            <div class="social">
                 <h3>F&ouml;lj oss</h3>
                 <ul>
-                    <li><a class="icon-fb" href="http://www.facebook.com/groups/oppendata/"><img src="/sites/default/files/icons/Facebook.png" />Facebook</a></li>
-                    <li><a class="icon-twitter" href="https://twitter.com/#!/oppendata"><img src="/sites/default/files/icons/Twitter.png" />Twitter</a></li>
-                    <li><a class="icon-rss" href="/nyheter/feed/"><img src="/sites/default/files/icons/RSS.png" />RSS</a></li>
+                    <li class="icon-twitter"><a href="https://twitter.com/#!/oppendata">Twitter</a></li>
+                    <li class="icon-rss"><a href="/nyheter/feed/">RSS</a></li>
                 </ul>
             </div>                
 

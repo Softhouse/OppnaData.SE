@@ -17,10 +17,16 @@
         padding-bottom: 2em;
     }
 
-    header .logo {
-        float: left;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;   
+    header {
+        h1 a {
+            margin-top: 1em;
+        }
+        .logo {
+            float: left;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-right: 1em;
+        }
     }
 
     #header-right{
@@ -63,14 +69,12 @@
 
     #main aside {
         .column(4);
-        background-color: @sidebarRightBackgroundColor;
 
         h2 {
             margin-top: 0.5em;
             margin-bottom: 0.5em;
             margin-left: 0;
         }
-
 
         .block {
             .box-sizing();

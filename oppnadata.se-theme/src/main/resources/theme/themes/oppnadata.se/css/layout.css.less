@@ -29,7 +29,7 @@ section h1 {
 #main > footer {
     .column(12);
 
-    .info, .contact, .syndication {
+    div {
         .column(4);
     }
 
@@ -40,7 +40,22 @@ section h1 {
     }
 
     li {
-        margin-bottom: 10px;
+        margin-bottom: 1em;
+        height: 32px;
+        line-height: 32px;
     }
+
+    .social li {
+        padding-left: 42px;
+        background-position: left middle;
+        background-repeat: no-repeat;
+        &.icon-rss{
+            background-image: url("/sites/default/files/icons/RSS.png");
+        }
+        &.icon-twitter{
+            background-image: url("/sites/default/files/icons/Twitter.png");
+        }
+    }
+
 
 }
