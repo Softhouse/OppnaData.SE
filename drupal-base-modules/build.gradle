@@ -9,11 +9,7 @@ dependencies {
 processResources << {
  
 	// TODO: Insert all modules under modules or sites/all/modules ???
-	// TODO: Include ckeditor library + module
 	// TODO: Download to an artifact directory instead so they are not needed to be re-downloaded to able to repackage the bundle
-	
-	// Module som saknas: OATH,CTOOLS, Context 
-	// Plus localization stöd: l10n_update
 	
 	println("Downloading Drupal modules...")
 	def drupal = new ArtifactDownloader(file("$buildDir"), "http://ftp.drupal.org/files/projects/")
@@ -66,6 +62,7 @@ processResources << {
 		from tarTree(drupal.getResource("twitter_profile_widget-6.x-1.6.tar.gz"))
 		// Needed by twitter end
 		from tarTree(drupal.getResource("i18n-6.x-1.10.tar.gz")) 
+		from tarTree(drupal.getResource("ckeditor-6.x-1.11.tar.gz"))
 		into "$buildDir/resources/main/module/modules"
 	}
 	
@@ -80,12 +77,16 @@ processResources << {
 		from zipTree(jquery.getResource("jquery.ui-1.6.zip"))
 		into "$buildDir/resources/main/module/sites/all/libraries"
 	}
-	
-	def tinymce = new ArtifactDownloader(file("$buildDir"), "http://github.com/downloads/tinymce/tinymce/")
-	//copy {
-	//	from zipTree(tinymce.getResource("tinymce_3.5.8.zip"))
-	//	into "$buildDir/resources/main/module/sites/all/libraries"
-	//}
+	def ckeditor = new ArtifactDownloader(file("$buildDir"), "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.5/")
+	copy {
+		from zipTree(ckeditor.getResource("ckeditor_3.6.5.zip"))
+		into "$buildDir/resources/main/module/sites/all/libraries"
+	}
+	def ckfinder = new ArtifactDownloader(file("$buildDir"), "http://download.cksource.com/CKFinder/CKFinder%20for%20PHP/2.3/")
+	copy {
+		from zipTree(ckfinder.getResource("ckfinder_php_2.3.zip"))
+		into "$buildDir/resources/main/module/sites/all/libraries/ckeditor"
+	}
 
 	def superfish = new ArtifactDownloader(file("$buildDir"), "https://github.com/mehrpadin/Superfish-for-Drupal/archive/")
 	copy {
