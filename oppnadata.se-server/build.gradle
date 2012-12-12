@@ -5,7 +5,7 @@ import java.io.File;
 version = "0.0.1"
 
 
-def tomcatVersion = "7.0.32"
+def tomcatVersion = "7.0.34"
 def karafVersion = "2.3.0"
 def tomcat = new ArtifactDownloader(file("$buildDir"), "http://apache.mirror3.ip-only.net/tomcat/tomcat-7/v" + tomcatVersion + "/bin/")
 def karaf = new ArtifactDownloader(file("$buildDir"), "http://apache.mirror3.ip-only.net/karaf/" + karafVersion + "/")
