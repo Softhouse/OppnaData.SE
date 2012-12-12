@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<features>
+        <!-- Scala -->
+    <feature name="scala" version="2.9.2">
+        <bundle>wrap:mvn:org.scala-lang/scala-library/2.9.2$Bundle-SymbolicName=ScalaLibrary&amp;Bundle-Version=2.9.2</bundle>
+    </feature>
+
+    <!-- Logging bundles -->
+    <feature name="logging" version="1.1.1">
+        <bundle>wrap:mvn:commons-logging/commons-logging/1.1.1$Bundle-SymbolicName=commons-logging&amp;Bundle-Version=1.1.1</bundle>
+    </feature>
+
+</features>
