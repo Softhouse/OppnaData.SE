@@ -157,6 +157,16 @@ body > footer li:after {
 section h1 {
   margin-left: 20px;
 }
+#ckan-datagrid .even {
+  background-color: white;
+}
+#ckan-datagrid tr {
+  border-top: 1px dashed black;
+  padding: 1em 1em;
+}
+#ckan-datagrid td {
+  padding-left: 0.5em;
+}
 #main > footer {
   display: inline;
   float: left;
