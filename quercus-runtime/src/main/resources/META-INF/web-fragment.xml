@@ -16,7 +16,8 @@
     -->
     <init-param>
       <param-name>script-encoding</param-name>
-      <param-value>UTF-8</param-value>
+      <!--  param-value>UTF-8</param-value -->
+      <param-value>iso-8859-1</param-value>
     </init-param>
 	
     <!--
@@ -29,12 +30,12 @@
       <param-value>jdbc/phpDb</param-value>
     </init-param>
 	-->
-	<!--  
+	
     <init-param>
       <param-name>ini-file</param-name>
       <param-value>WEB-INF/php.ini</param-value>
     </init-param>
-    -->
+    
     
     <!--
       Location of the license to enable php to java compilation.
