@@ -3,5 +3,6 @@ include 	'ckan-service',
 			'drupal-runtime',
 			'drupal-base-modules',
 			'ckan-field-module',
+			'multitaxonomy-filter-module',
 			'oppnadata.se-theme',
 			'oppnadata.se-server'

@@ -469,7 +469,7 @@ public class Post
                                   boolean isReplaceSpacesWithUnderscores)
   {
 	  
-	  isReplaceSpacesWithUnderscores = false;
+	isReplaceSpacesWithUnderscores = false;
 	  
     int p = -1;
     int q = -1;

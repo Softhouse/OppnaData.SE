@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: multitaxonomy-filter-module 
+Bundle-Version: 0.0.1
+Bundle-Name: Multi Taxonomy Filter Module 
+TDR-Host: Drupal Runtime
+TDR-Host-Prio: 2
+TDR-Resource-Directory: webapps/ROOT
+TDR-Exported-Paths: module=
+
+

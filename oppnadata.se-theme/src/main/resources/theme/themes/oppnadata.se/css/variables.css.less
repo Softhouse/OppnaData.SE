@@ -8,7 +8,7 @@
 @headerFontWeight: bold;
 
 
-@fontSize: 12; 		// base font-size in pixels
+@fontSize: 14; 		// base font-size in pixels
 @em: @fontSize*1em;	// shorthand for outputting ems, e.g. "12/@em"
 
 
@@ -40,7 +40,8 @@
 
 @black: #000000;
 @white: #FFFFFF;
-@lightGray: #EBEBEB;
+@lightGray: #F6F6F6;
+@darkGray: #383838;
 @borderColor: #B3B3B3;
 
 
@@ -55,14 +56,24 @@
 // HEADER
 @headerBackgroundColor: @white;
 @headerHeight: 110px;
+@headerH1Color: @darkGray;
+@headerH1AColor: @darkGray;
+@h1Color: @gray2;
+@h1AColor: @gray2;
 
 // CONTENT
-@contentBackgroundColor: @lightGray;
-@sidebarRightBackgroundColor: @lightGray;
+@contentBackgroundColor: @white;
+@sidebarRightBackgroundColor: @contentBackgroundColor;
 @sectionBackgroundColor: @lightGray;
+@headBorderColor: @purple2;
+@contentFooterBGC: #EBEBEB;
+
 
 // ASIDE
 @breadcrumbBackgroundColor: @contentBackgroundColor;
 
 // FOOTER
-@footerBackgroundColor: @white;
+@footerBackgroundColor: @lightGray;
+@footerBorderColor: @black;
+
+

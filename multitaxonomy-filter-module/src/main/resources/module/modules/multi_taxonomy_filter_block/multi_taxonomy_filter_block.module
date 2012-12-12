@@ -1,0 +1,111 @@
+<?php
+
+//----------------------------------------------------------------------------
+// Drupal core hooks.
+
+// TODO: Keep the selected state between each search. Make a auto submit?
+
+/**
+ * Implementation of hook_block().
+ */
+function multi_taxonomy_filter_block_block($op = 'list', $delta = 0, $edit = array()) {
+  if ($op == 'list') {
+    $blocks['multi-taxonomy-filter'] = array(
+      'info'   => t('Multi Taxonomy Filter'),
+      'weight' => 0,
+      'region' => 'left',
+      'cache'  => BLOCK_NO_CACHE, // Drupal Forms may never be cached.
+    );
+    return $blocks;
+  }
+  else if ($op == 'view') {
+    switch($delta) {
+      case 'multi-taxonomy-filter':
+        $block['subject'] = t('Filter by term');
+        $block['content'] = drupal_get_form('multi_taxonomy_filter_block_form');
+        return $block;
+    }
+  }
+}
+
+
+//----------------------------------------------------------------------------
+// Forms API callbacks.
+
+
+/**
+ * Form definition function; Hierarchical Select Taxonomy Filter Block form.
+ */
+function multi_taxonomy_filter_block_form($form_state) {
+  $form['filter'] = array(
+    '#type' => 'hierarchical_select',
+    
+    // TODO: Have labels configurable
+    
+  //  '#title' => t('Filter'),
+  //  '#description' => t('This is a pointless description.'),
+    // Consult API.txt for an explanation of all these settings.
+    '#config' => array(
+      'module' => 'hs_taxonomy',
+      'params' => array(
+        'vid' => 1, // Enter your vocabulary ID here.
+        'root_term' => NULL, // Enter a term ID here if you want to display only terms below the term with that ID.
+      ),
+      'save_lineage'    => 1,
+      'enforce_deepest' => 0,
+      'entity_count'    => 0,
+      'require_entity'  => 0,
+      'resizable'       => 1,
+      'level_labels' => array(
+        'status' => 1,
+        'labels' => array(),
+      ),
+      'dropbox' => array(
+        // Only allow for a single term or single lineage to be selected.
+        'status' => 1,
+        'title'  => t('Valda kategorier'),
+        'reset_hs' => 0
+      ),
+      'editability' => array(
+        // Creating new terms from within a form to filter by existing terms
+        // doesn't make sense, hence it is disabled.
+        'status' => 0,
+      ),
+    ),
+    '#default_value' => array(), // To set a default value, fill this with one or more term IDs.
+  );
+
+  $form['apply'] = array(
+    '#type' => 'submit', 
+    '#value' => t('Apply'),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submit callback; Hierarchical Select Taxonomy Filter Block form.
+ */
+function multi_taxonomy_filter_block_form_submit($form_id, &$form_state) {
+  $value = $form_state['values']['filter'];
+
+  // Create an array containing all the term names that have been selected.
+  // Even when only a single term has been submitted (i.e. when the dropbox is
+  // disabled).
+  $terms = array();
+  $terms_arg_string = "";
+  if (is_array($value)) {
+    foreach ($value as $term_id) {
+      $terms_arg_string .= "-$term_id";
+      //$term = taxonomy_get_term($term_id);
+      //$terms[] = $term->name;
+    }
+  }
+  else {
+   // $term = taxonomy_get_term($value);
+   // $terms[] = $term->name;
+   $terms_arg_string = $value;
+  }
+ 
+  drupal_goto("term_add/$terms_arg_string");
+}

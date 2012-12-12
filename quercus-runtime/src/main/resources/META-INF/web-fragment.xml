@@ -23,17 +23,18 @@
       Tells Quercus to use the following JDBC database and to ignore the
       arguments of mysql_connect().
     -->
-    <!--  
+    <!-- TODO: Make this work. It might be problems to lookup JNDI resources at startup of TDR servlets  
     <init-param>
       <param-name>database</param-name>
-      <param-value>jdbc/phpdatabase</param-value>
+      <param-value>jdbc/phpDb</param-value>
     </init-param>
 	-->
-	
+	<!--  
     <init-param>
       <param-name>ini-file</param-name>
       <param-value>WEB-INF/php.ini</param-value>
     </init-param>
+    -->
     
     <!--
       Location of the license to enable php to java compilation.

@@ -1,24 +1,17 @@
 body > header,
-#header-container,
 #nav-container,
 #main,
 #breadcrumbs,
 #content .node .content,
 #content .node footer,
 body > footer,
-#footer-container,
-#footer-container li {
+section,
+body > footer li {
     .clearfix;
 }
 
-#header-container,
-#main,
-#footer-container {
-    margin: 0 auto;
-}
-
 #main {
-    padding-top: 1em;
+    padding: 1.5em 1.5em;
 }
 
 #content .node {
@@ -33,18 +26,21 @@ section h1 {
     margin-left: @gutter-width*1px;
 }
 
-#content .node h2,
-#content .node .taxonomy {
-    margin: 0 0 0.5em 84px;
-}
+#main > footer {
+    .column(12);
 
-#content .node .icon-container {
-    width: 64px;
-    height: 64px;
-    float: left;
-    padding: 10px;
-}
+    .info, .contact, .syndication {
+        .column(4);
+    }
 
-#footer-container {
-    text-align: center;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
 }

@@ -30,10 +30,10 @@ function rapidresponse_preprocess_search_block_form(&$vars, $hook)
     // Add a custom class to the search box
     // Set yourtheme.css > #search-block-form .form-text { color: #888888; }
     $vars['form']['search_block_form']['#attributes'] = array(
-        'placeholder' => t('Sök..')
+        'placeholder' => t('S&ouml;k..')
     );
 
-    $vars['form']['submit']['#value'] = t('Sök');
+    $vars['form']['submit']['#value'] = t('S&ouml;k');
 
     // Rebuild the rendered version (search form only, rest remains unchanged)
     unset($vars['form']['search_block_form']['#printed']);
