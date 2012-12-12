@@ -13,7 +13,7 @@ function multi_taxonomy_filter_block_block($op = 'list', $delta = 0, $edit = arr
     $blocks['multi-taxonomy-filter'] = array(
       'info'   => t('Multi Taxonomy Filter'),
       'weight' => 0,
-      'region' => 'left',
+      'region' => 'right',
       'cache'  => BLOCK_NO_CACHE, // Drupal Forms may never be cached.
     );
     return $blocks;
@@ -48,7 +48,7 @@ function multi_taxonomy_filter_block_form($form_state) {
     '#config' => array(
       'module' => 'hs_taxonomy',
       'params' => array(
-        'vid' => 1, // Enter your vocabulary ID here.
+        'vid' => 1, // TODO: Have this configurable
         'root_term' => NULL, // Enter a term ID here if you want to display only terms below the term with that ID.
       ),
       'save_lineage'    => 1,
@@ -57,14 +57,13 @@ function multi_taxonomy_filter_block_form($form_state) {
       'require_entity'  => 0,
       'resizable'       => 1,
       'level_labels' => array(
-        'status' => 1,
+        'status' => 0,
         'labels' => array(),
       ),
       'dropbox' => array(
-        // Only allow for a single term or single lineage to be selected.
         'status' => 1,
         'title'  => t('Valda kategorier'),
-        'reset_hs' => 0
+        'reset_hs' => 1
       ),
       'editability' => array(
         // Creating new terms from within a form to filter by existing terms
@@ -72,12 +71,12 @@ function multi_taxonomy_filter_block_form($form_state) {
         'status' => 0,
       ),
     ),
-    '#default_value' => array(), // To set a default value, fill this with one or more term IDs.
+    '#default_value' => t(''), // To set a default value, fill this with one or more term IDs.
   );
 
   $form['apply'] = array(
     '#type' => 'submit', 
-    '#value' => t('Apply'),
+    '#value' => t('Filtrera'),
   );
 
   return $form;
@@ -95,10 +94,15 @@ function multi_taxonomy_filter_block_form_submit($form_id, &$form_state) {
   $terms = array();
   $terms_arg_string = "";
   if (is_array($value)) {
+    $firstTerm = true;
     foreach ($value as $term_id) {
-      $terms_arg_string .= "-$term_id";
-      //$term = taxonomy_get_term($term_id);
-      //$terms[] = $term->name;
+      if ( $firstTerm ) {
+         $terms_arg_string .= "$term_id";
+         $firstTerm = false
+      }
+      else {
+         $terms_arg_string .= "-$term_id";
+      }
     }
   }
   else {
@@ -107,5 +111,5 @@ function multi_taxonomy_filter_block_form_submit($form_id, &$form_state) {
    $terms_arg_string = $value;
   }
  
-  drupal_goto("term_add/$terms_arg_string");
+  drupal_goto("filter/$terms_arg_string");
 }
