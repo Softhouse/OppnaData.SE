@@ -1,0 +1,7 @@
+; $Id$
+name = Multi Taxonomy Filter Block
+description = Use Hierarchical Select for a multi Taxonomy filter block
+dependencies[] = taxonomy
+dependencies[] = hs_taxonomy
+dependencies[] = hierarchical_select
+core = 6.x
