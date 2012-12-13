@@ -200,6 +200,9 @@ section h1 {
 #main > footer .social li.icon-twitter {
   background-image: url("/sites/default/files/icons/Twitter.png");
 }
+body > header h1 {
+  float: left;
+}
 body {
   font: 14px/1.3 'Open Sans', sans-serif;
 }
@@ -246,6 +249,9 @@ h3 a,
 div.item-list ul li {
   list-style: none;
   list-style-type: none;
+}
+#beta {
+  text-transform: uppercase;
 }
 input {
   text-indent: 0.5em;

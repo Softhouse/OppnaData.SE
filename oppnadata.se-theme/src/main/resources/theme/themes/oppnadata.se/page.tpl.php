@@ -19,7 +19,8 @@
                 
                 <a href="/"><img class="logo" src="/sites/default/files/wireframe.png" /></a>
               
-                <h1><a href="/">&Ouml;ppnadata</a></h1>
+                <div id="beta">beta</div>
+                <h1><a href="/">&Ouml;ppna&nbsp;data</a></h1>
 
                 <div id="header-right">
                     <?php print $header_right; ?>
@@ -85,7 +86,7 @@
             <div class="social">
                 <h3>F&ouml;lj oss</h3>
                 <ul>
-                    <li class="icon-twitter"><a href="https://twitter.com/#!/oppendata">Twitter</a></li>
+                    <li class="icon-twitter"><a href="https://twitter.com/search?q=%23oppnadata">Twitter</a></li>
                     <li class="icon-rss"><a href="/nyheter/feed/">RSS</a></li>
                 </ul>
             </div>                
