@@ -19,7 +19,7 @@
                 
                 <a href="/"><img class="logo" src="/sites/default/files/wireframe.png" /></a>
               
-                <div id="beta">beta</div>
+                
                 <h1><a href="/">&Ouml;ppna&nbsp;data</a></h1>
 
                 <div id="header-right">
@@ -73,7 +73,7 @@
 
             <div class="info">
                 <h3>Denna webbplats</h3>            
-                <p>Webbplatesen ing&aring;r en satsning f&ouml;r sveriges framtid.&nbsp;<a href="/node/7">Om webbplatsen</a></p>
+                <p>&ouml;ppnadata.se - en portal f&ouml;r innovation. <a href="/node/7">Om webbplatsen</a></p>
             </div>
 
             <div class="contact">
