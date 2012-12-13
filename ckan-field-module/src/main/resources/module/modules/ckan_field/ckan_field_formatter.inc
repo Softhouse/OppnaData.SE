@@ -75,7 +75,7 @@ function render_dataset($dataset) {
 	// Information table
 	//
 	$rows = array( array('<b>Titel</b>&nbsp;', drupal_convert_to_utf8($dataset->title(), 'iso-8859-1')),
-			array('<b>Utgivare</b>&nbsp;', $dataset->author()),
+			array('<b>Utgivare</b>&nbsp;', drupal_convert_to_utf8($dataset->author(), 'iso-8859-1')),
 			array('<b>Beskrivning</b>&nbsp;', drupal_convert_to_utf8($dataset->notes_rendered(), 'iso-8859-1')),
 			//array('<b>Version</b>&nbsp;', $dataset->version()),
 			array('<b>Skapad</b>&nbsp;', $dataset->metadata_created_date()),
