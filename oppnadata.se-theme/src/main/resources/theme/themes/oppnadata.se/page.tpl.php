@@ -87,7 +87,7 @@
                 <h3>F&ouml;lj oss</h3>
                 <ul>
                     <li class="icon-twitter"><a href="https://twitter.com/search?q=%23oppnadata">Twitter</a></li>
-                    <li class="icon-rss"><a href="/nyheter/feed/">RSS</a></li>
+                    <li class="icon-rss"><a href="/rss-blogg">RSS</a></li>
                 </ul>
             </div>                
 
