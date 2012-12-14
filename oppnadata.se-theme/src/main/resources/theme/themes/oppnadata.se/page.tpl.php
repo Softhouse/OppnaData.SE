@@ -19,8 +19,7 @@
                 
                 <a href="/"><img class="logo" src="/sites/default/files/wireframe.png" /></a>
               
-                
-                <h1><a href="/">&Ouml;ppna&nbsp;data</a></h1>
+                <h1><a href="/">&Ouml;ppna&nbsp;data</a><span>&nbsp;beta</span></h1>
 
                 <div id="header-right">
                     <?php print $header_right; ?>
